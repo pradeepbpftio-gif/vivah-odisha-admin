@@ -1054,6 +1054,16 @@ function filterVenueType(el,type){
 }
 
 function filterVenues(district){}
+function filterBookingTab(el,status){
+  document.querySelectorAll('#pg-bookings .tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+}
+function searchBookings(val){
+  const rows = document.querySelectorAll('#bookings-tbody tr');
+  rows.forEach(r=>{
+    r.style.display = r.textContent.toLowerCase().includes(val.toLowerCase()) ? '' : 'none';
+  });
+}
 function filterBookings(el,status){
   document.querySelectorAll('#pg-bookings .tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
