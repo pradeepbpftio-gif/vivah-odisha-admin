@@ -676,36 +676,165 @@ body{font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);mi
   <!-- ══ BOOKINGS ══ -->
   <div class="page" id="pg-bookings">
     <div class="kgrid" style="margin-bottom:16px">
-      <div class="kpi"><div class="kpi-label">This Month</div><div class="kpi-val">34</div><div class="kpi-delta up">▲ 12 bookings</div></div>
-      <div class="kpi"><div class="kpi-label">Advance Collected</div><div class="kpi-val">₹18.4L</div><div class="kpi-delta up">▲ 8%</div></div>
-      <div class="kpi"><div class="kpi-label">Avg Booking Value</div><div class="kpi-val">₹1.52L</div><div class="kpi-delta up">▲ 5%</div></div>
-      <div class="kpi"><div class="kpi-label">Pending Action</div><div class="kpi-val">48</div><div class="kpi-delta dn">Needs follow-up</div></div>
+      <div class="kpi"><div class="kpi-icon">📋</div><div class="kpi-label">This Month</div><div class="kpi-val">34</div><div class="kpi-delta up">▲ 12 new bookings</div><div class="kbar"><div class="kfill" style="width:68%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">💰</div><div class="kpi-label">Advance Collected</div><div class="kpi-val">₹18.4L</div><div class="kpi-delta up">▲ 8% this week</div><div class="kbar"><div class="kfill" style="width:55%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">📊</div><div class="kpi-label">Avg Booking Value</div><div class="kpi-val">₹1.52L</div><div class="kpi-delta up">▲ 5% this quarter</div><div class="kbar"><div class="kfill" style="width:45%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">⚠️</div><div class="kpi-label">Pending Action</div><div class="kpi-val">48</div><div class="kpi-delta dn">Needs follow-up today</div><div class="kbar"><div class="kfill" style="width:26%;background:#c0392b"></div></div></div>
     </div>
+
+    <!-- Payment Overview -->
+    <div class="card" style="margin-bottom:14px">
+      <div class="card-hd">Payment Overview — This Month</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+        <div style="text-align:center;padding:12px;background:var(--okb);border-radius:10px;border:1px solid var(--okr)">
+          <div style="font-size:11px;color:var(--ok);font-weight:600;margin-bottom:4px">Total Billed</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--ok)">₹52.4L</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:var(--goldp);border-radius:10px;border:1px solid #E8D5A0">
+          <div style="font-size:11px;color:var(--gold);font-weight:600;margin-bottom:4px">Advance Paid</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--gold)">₹18.4L</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:var(--warnb);border-radius:10px;border:1px solid var(--warnr)">
+          <div style="font-size:11px;color:var(--warn);font-weight:600;margin-bottom:4px">Balance Due</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--warn)">₹34.0L</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:var(--errb);border-radius:10px;border:1px solid var(--errr)">
+          <div style="font-size:11px;color:var(--err);font-weight:600;margin-bottom:4px">Overdue</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--err)">₹4.2L</div>
+        </div>
+      </div>
+      <div style="margin-top:12px">
+        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--dark3);margin-bottom:5px">
+          <span>Payment collection progress this month</span>
+          <span style="font-weight:600;color:var(--dark)">35% collected of total billed</span>
+        </div>
+        <div style="height:8px;background:var(--gray2);border-radius:4px;overflow:hidden">
+          <div style="height:100%;width:35%;background:linear-gradient(90deg,var(--ok),var(--gold));border-radius:4px"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="tabs">
-      <div class="tab active" onclick="filterBookings(this,'all')">All (187)</div>
-      <div class="tab" onclick="filterBookings(this,'confirmed')">Confirmed (112)</div>
-      <div class="tab" onclick="filterBookings(this,'pending')">Pending (48)</div>
-      <div class="tab" onclick="filterBookings(this,'completed')">Completed (89)</div>
-      <div class="tab" onclick="filterBookings(this,'cancelled')">Cancelled (7)</div>
+      <div class="tab active" onclick="filterBookingTab(this,'all')">All (187)</div>
+      <div class="tab" onclick="filterBookingTab(this,'confirmed')">✓ Confirmed (112)</div>
+      <div class="tab" onclick="filterBookingTab(this,'pending')">⏳ Pending (48)</div>
+      <div class="tab" onclick="filterBookingTab(this,'completed')">🎉 Completed (89)</div>
+      <div class="tab" onclick="filterBookingTab(this,'cancelled')">✗ Cancelled (7)</div>
     </div>
+
     <div class="card">
       <div class="card-hd">All Bookings
-        <div style="display:flex;gap:8px">
-          <select style="border:1px solid var(--gray2);border-radius:7px;padding:5px 10px;font-size:12px;font-family:'Outfit',sans-serif;background:var(--gray);outline:none"><option>All Districts</option><option>Khordha</option><option>Cuttack</option><option>Puri</option></select>
-          <select style="border:1px solid var(--gray2);border-radius:7px;padding:5px 10px;font-size:12px;font-family:'Outfit',sans-serif;background:var(--gray);outline:none"><option>All Months</option><option>April 2025</option><option>May 2025</option></select>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <input class="tb-search" style="width:160px" placeholder="🔍 Search..." oninput="searchBookings(this.value)">
+          <select style="border:1px solid var(--gray2);border-radius:7px;padding:6px 10px;font-size:12px;font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);outline:none">
+            <option>All Districts</option><option>Khordha</option><option>Cuttack</option><option>Puri</option><option>Ganjam</option>
+          </select>
+          <select style="border:1px solid var(--gray2);border-radius:7px;padding:6px 10px;font-size:12px;font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);outline:none">
+            <option>All Months</option><option>April 2025</option><option>May 2025</option><option>June 2025</option>
+          </select>
+          <button style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:7px;padding:6px 12px;font-size:12px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:500">📥 Export Excel</button>
+          <button style="background:var(--errb);color:var(--err);border:1px solid var(--errr);border-radius:7px;padding:6px 12px;font-size:12px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:500">⚠️ Overdue (12)</button>
         </div>
       </div>
       <div class="tbl-wrap">
         <table class="tbl">
-          <thead><tr><th>ID</th><th>Couple</th><th>Venue</th><th>Type</th><th>Date</th><th>Package</th><th>Total</th><th>Paid</th><th>Contact</th><th>Status</th><th>Action</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Booking ID</th><th>Couple</th><th>Venue</th><th>Type</th><th>Wedding Date</th><th>Package</th><th>Total Amount</th><th>Payment</th><th>Contact</th><th>Status</th><th>Actions</th>
+            </tr>
+          </thead>
           <tbody id="bookings-tbody">
-            <tr><td style="font-weight:600;color:var(--gold)">VIV-0187</td><td>Priya & Rohan Das</td><td>Kalinga Conv.</td><td><span class="b b-g">Mandap</span></td><td>Apr 28</td><td><span class="b b-w">Gold</span></td><td style="font-weight:600">₹2,57,000</td><td style="color:var(--ok)">₹51,400</td><td><span style="font-size:13px">📞 💬</span></td><td><span class="b b-ok">Confirmed</span></td><td><button style="font-size:10px;padding:3px 9px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-family:'Outfit',sans-serif">View</button></td></tr>
-            <tr><td style="font-weight:600;color:var(--gold)">VIV-0186</td><td>Sunita & Amit Patra</td><td>Mayfair Hotel</td><td><span class="b b-i">Hotel</span></td><td>Apr 30</td><td><span class="b b-w">Platinum</span></td><td style="font-weight:600">₹4,65,000</td><td style="color:var(--ok)">₹93,000</td><td><span style="font-size:13px">📞 💬</span></td><td><span class="b b-ok">Confirmed</span></td><td><button style="font-size:10px;padding:3px 9px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-family:'Outfit',sans-serif">View</button></td></tr>
-            <tr><td style="font-weight:600;color:var(--gold)">VIV-0185</td><td>Mamata & Sanjay</td><td>Swosti Hotel</td><td><span class="b b-i">Hotel</span></td><td>May 1</td><td><span class="b b-w">Gold</span></td><td style="font-weight:600">₹2,10,000</td><td style="color:var(--warn)">₹0</td><td><span style="font-size:13px">📞 💬</span></td><td><span class="b b-w">Advance Due</span></td><td><button style="font-size:10px;padding:3px 9px;border:1px solid var(--gold);border-radius:6px;cursor:pointer;background:var(--goldp);font-family:'Outfit',sans-serif;color:var(--dark2)">Remind</button></td></tr>
-            <tr><td style="font-weight:600;color:var(--gold)">VIV-0184</td><td>Rina & Bijay</td><td>Mahanadi Grd.</td><td><span class="b b-g">Ground</span></td><td>May 3</td><td><span class="b b-g">Silver</span></td><td style="font-weight:600">₹1,08,000</td><td style="color:var(--ok)">₹21,600</td><td><span style="font-size:13px">📞 💬</span></td><td><span class="b b-ok">Confirmed</span></td><td><button style="font-size:10px;padding:3px 9px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-family:'Outfit',sans-serif">View</button></td></tr>
-            <tr><td style="font-weight:600;color:var(--gold)">VIV-0183</td><td>Lipsa & Debasish</td><td>Puri Heritage</td><td><span class="b b-g">Mandap</span></td><td>May 6</td><td><span class="b b-g">Silver</span></td><td style="font-weight:600">₹1,08,000</td><td style="color:var(--dark3)">—</td><td><span style="font-size:13px">📞 💬</span></td><td><span class="b b-g">Enquiry</span></td><td><button style="font-size:10px;padding:3px 9px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-family:'Outfit',sans-serif">Convert</button></td></tr>
+            <tr onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="font-weight:700;color:var(--gold);font-size:13px">VIV-0187</div><div style="font-size:9px;color:var(--dark3)">Created Apr 20</div></td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:var(--maroon);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">PR</div><div><div style="font-size:12px;font-weight:500">Priya & Rohan Das</div><div style="font-size:10px;color:var(--dark3)">📞 9876543210</div></div></div></td>
+              <td><div style="font-size:12px;font-weight:500">Kalinga Conv.</div><div style="font-size:10px;color:var(--dark3)">Khordha</div></td>
+              <td><span class="b b-g">Mandap</span></td>
+              <td><div style="font-size:12px;font-weight:500">Apr 28, 2025</div><div style="font-size:10px;color:var(--dark3)">Monday</div></td>
+              <td><span class="b b-w">Gold</span></td>
+              <td><div style="font-size:13px;font-weight:700">₹2,57,000</div><div style="height:4px;background:var(--gray2);border-radius:2px;margin-top:4px;width:80px"><div style="height:100%;width:20%;background:var(--ok);border-radius:2px"></div></div><div style="font-size:9px;color:var(--ok);margin-top:2px">₹51,400 paid (20%)</div></td>
+              <td><span class="b b-ok">✓ Advance Paid</span></td>
+              <td><div style="display:flex;gap:5px"><button style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">📞</button><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">💬</button></div></td>
+              <td><span class="b b-ok">Confirmed</span></td>
+              <td><div style="display:flex;gap:4px"><button style="font-size:10px;padding:4px 9px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-family:'Outfit',sans-serif">View</button><button style="font-size:10px;padding:4px 9px;border:1px solid var(--bluer);border-radius:6px;cursor:pointer;background:var(--blueb);color:var(--blue);font-family:'Outfit',sans-serif">Invoice</button></div></td>
+            </tr>
+            <tr onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="font-weight:700;color:var(--gold);font-size:13px">VIV-0186</div><div style="font-size:9px;color:var(--dark3)">Created Apr 18</div></td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:#1A3A6B;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">SA</div><div><div style="font-size:12px;font-weight:500">Sunita & Amit Patra</div><div style="font-size:10px;color:var(--dark3)">📞 9876543211</div></div></div></td>
+              <td><div style="font-size:12px;font-weight:500">Mayfair Hotel</div><div style="font-size:10px;color:var(--dark3)">Khordha · Ballroom</div></td>
+              <td><span class="b b-i">Hotel</span></td>
+              <td><div style="font-size:12px;font-weight:500">Apr 30, 2025</div><div style="font-size:10px;color:var(--dark3)">Wednesday</div></td>
+              <td><span class="b" style="background:#F0E8FF;color:#5820A0;border:1px solid #C8A0E8">Platinum</span></td>
+              <td><div style="font-size:13px;font-weight:700">₹4,65,000</div><div style="height:4px;background:var(--gray2);border-radius:2px;margin-top:4px;width:80px"><div style="height:100%;width:20%;background:var(--ok);border-radius:2px"></div></div><div style="font-size:9px;color:var(--ok);margin-top:2px">₹93,000 paid (20%)</div></td>
+              <td><span class="b b-ok">✓ Advance Paid</span></td>
+              <td><div style="display:flex;gap:5px"><button style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">📞</button><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">💬</button></div></td>
+              <td><span class="b b-ok">Confirmed</span></td>
+              <td><div style="display:flex;gap:4px"><button style="font-size:10px;padding:4px 9px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-family:'Outfit',sans-serif">View</button><button style="font-size:10px;padding:4px 9px;border:1px solid var(--bluer);border-radius:6px;cursor:pointer;background:var(--blueb);color:var(--blue);font-family:'Outfit',sans-serif">Invoice</button></div></td>
+            </tr>
+            <tr style="background:#FFF5F5" onmouseover="this.style.background='#FDEAEA'" onmouseout="this.style.background='#FFF5F5'">
+              <td><div style="font-weight:700;color:var(--err);font-size:13px">VIV-0185</div><div style="font-size:9px;color:var(--err);font-weight:600">⚠️ OVERDUE</div></td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:var(--err);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">MS</div><div><div style="font-size:12px;font-weight:500">Mamata & Sanjay Nayak</div><div style="font-size:10px;color:var(--dark3)">📞 9876543212</div></div></div></td>
+              <td><div style="font-size:12px;font-weight:500">Swosti Hotel</div><div style="font-size:10px;color:var(--dark3)">Khordha · Ballroom</div></td>
+              <td><span class="b b-i">Hotel</span></td>
+              <td><div style="font-size:12px;font-weight:500;color:var(--err)">May 1, 2025</div><div style="font-size:10px;color:var(--err);font-weight:600">⚠️ Event in 2 days!</div></td>
+              <td><span class="b b-w">Gold</span></td>
+              <td><div style="font-size:13px;font-weight:700">₹2,10,000</div><div style="height:4px;background:var(--errr);border-radius:2px;margin-top:4px;width:80px"><div style="height:100%;width:0%;background:var(--err);border-radius:2px"></div></div><div style="font-size:9px;color:var(--err);margin-top:2px;font-weight:700">₹0 paid — Advance Due!</div></td>
+              <td><span class="b b-e">✗ Not Paid</span></td>
+              <td><div style="display:flex;gap:5px"><button style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">📞</button><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">💬</button></div></td>
+              <td><span class="b b-w">Advance Due</span></td>
+              <td><button style="font-size:10px;padding:4px 12px;border:1px solid var(--warnr);border-radius:6px;cursor:pointer;background:var(--warnb);color:var(--warn);font-family:'Outfit',sans-serif;font-weight:600">🔔 Send Reminder</button></td>
+            </tr>
+            <tr onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="font-weight:700;color:var(--gold);font-size:13px">VIV-0184</div><div style="font-size:9px;color:var(--dark3)">Created Apr 15</div></td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:var(--dark3);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">RB</div><div><div style="font-size:12px;font-weight:500">Rina & Bijay Mohapatra</div><div style="font-size:10px;color:var(--dark3)">📞 9876543213</div></div></div></td>
+              <td><div style="font-size:12px;font-weight:500">Mahanadi Grd.</div><div style="font-size:10px;color:var(--dark3)">Cuttack</div></td>
+              <td><span class="b b-g">Ground</span></td>
+              <td><div style="font-size:12px;font-weight:500">May 3, 2025</div><div style="font-size:10px;color:var(--dark3)">Saturday</div></td>
+              <td><span class="b b-ok">Silver</span></td>
+              <td><div style="font-size:13px;font-weight:700">₹1,08,000</div><div style="height:4px;background:var(--gray2);border-radius:2px;margin-top:4px;width:80px"><div style="height:100%;width:20%;background:var(--ok);border-radius:2px"></div></div><div style="font-size:9px;color:var(--ok);margin-top:2px">₹21,600 paid (20%)</div></td>
+              <td><span class="b b-ok">✓ Advance Paid</span></td>
+              <td><div style="display:flex;gap:5px"><button style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">📞</button><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">💬</button></div></td>
+              <td><span class="b b-ok">Confirmed</span></td>
+              <td><div style="display:flex;gap:4px"><button style="font-size:10px;padding:4px 9px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-family:'Outfit',sans-serif">View</button><button style="font-size:10px;padding:4px 9px;border:1px solid var(--bluer);border-radius:6px;cursor:pointer;background:var(--blueb);color:var(--blue);font-family:'Outfit',sans-serif">Invoice</button></div></td>
+            </tr>
+            <tr onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="font-weight:700;color:var(--gold);font-size:13px">VIV-0183</div><div style="font-size:9px;color:var(--dark3)">Created Apr 14</div></td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">LD</div><div><div style="font-size:12px;font-weight:500">Lipsa & Debasish Jena</div><div style="font-size:10px;color:var(--dark3)">📞 9876543214</div></div></div></td>
+              <td><div style="font-size:12px;font-weight:500">Puri Heritage</div><div style="font-size:10px;color:var(--dark3)">Puri</div></td>
+              <td><span class="b b-g">Mandap</span></td>
+              <td><div style="font-size:12px;font-weight:500">May 6, 2025</div><div style="font-size:10px;color:var(--dark3)">Tuesday</div></td>
+              <td><span class="b b-ok">Silver</span></td>
+              <td><div style="font-size:13px;font-weight:700">₹1,08,000</div><div style="font-size:9px;color:var(--dark3);margin-top:3px">Awaiting confirmation</div></td>
+              <td><span class="b b-g">— Enquiry</span></td>
+              <td><div style="display:flex;gap:5px"><button style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">📞</button><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">💬</button></div></td>
+              <td><span class="b b-g">Enquiry</span></td>
+              <td><button style="font-size:10px;padding:4px 12px;border:1px solid var(--okr);border-radius:6px;cursor:pointer;background:var(--okb);color:var(--ok);font-family:'Outfit',sans-serif;font-weight:600">✓ Convert</button></td>
+            </tr>
+            <tr style="opacity:.8" onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="font-weight:700;color:var(--dark3);font-size:13px">VIV-0179</div><div style="font-size:9px;color:var(--ok)">✓ Completed</div></td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:var(--ok);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">TK</div><div><div style="font-size:12px;font-weight:500">Tapan & Kabita Das</div><div style="font-size:10px;color:var(--dark3)">📞 9876543215</div></div></div></td>
+              <td><div style="font-size:12px;font-weight:500">Kalinga Conv.</div><div style="font-size:10px;color:var(--dark3)">Khordha</div></td>
+              <td><span class="b b-g">Mandap</span></td>
+              <td><div style="font-size:12px;font-weight:500">Apr 15, 2025</div><div style="font-size:10px;color:var(--ok)">✓ Event done</div></td>
+              <td><span class="b b-w">Gold</span></td>
+              <td><div style="font-size:13px;font-weight:700">₹2,57,000</div><div style="height:4px;background:var(--gray2);border-radius:2px;margin-top:4px;width:80px"><div style="height:100%;width:100%;background:var(--ok);border-radius:2px"></div></div><div style="font-size:9px;color:var(--ok);margin-top:2px">Fully paid ✓</div></td>
+              <td><span class="b b-ok">✓ Fully Paid</span></td>
+              <td><div style="display:flex;gap:5px"><button style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">📞</button><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer">💬</button></div></td>
+              <td><span class="b b-i">Completed</span></td>
+              <td><div style="display:flex;gap:4px"><button style="font-size:10px;padding:4px 9px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-family:'Outfit',sans-serif">View</button><button style="font-size:10px;padding:4px 9px;border:1px solid var(--okr);border-radius:6px;cursor:pointer;background:var(--okb);color:var(--ok);font-family:'Outfit',sans-serif">⭐ Review</button></div></td>
+            </tr>
           </tbody>
         </table>
+      </div>
+      <!-- Pagination Footer -->
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-top:1px solid var(--gray2);margin-top:8px;flex-wrap:wrap;gap:10px">
+        <div style="font-size:12px;color:var(--dark3)">Showing <strong style="color:var(--dark)">6</strong> of <strong style="color:var(--dark)">187</strong> bookings · Total: <strong style="color:var(--maroon)">₹13,05,000</strong></div>
+        <div style="display:flex;gap:4px">
+          <button style="padding:5px 11px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-size:12px;font-family:'Outfit',sans-serif">← Prev</button>
+          <button style="padding:5px 11px;border:1px solid var(--gold);border-radius:6px;cursor:pointer;background:var(--goldp);font-size:12px;font-family:'Outfit',sans-serif;color:var(--dark2);font-weight:600">1</button>
+          <button style="padding:5px 11px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-size:12px;font-family:'Outfit',sans-serif">2</button>
+          <button style="padding:5px 11px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-size:12px;font-family:'Outfit',sans-serif">3</button>
+          <button style="padding:5px 11px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-size:12px;font-family:'Outfit',sans-serif">Next →</button>
+        </div>
       </div>
     </div>
   </div>
