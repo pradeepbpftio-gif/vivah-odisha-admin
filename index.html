@@ -1406,28 +1406,227 @@ body{font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);mi
 
   <!-- ══ PRE-WEDDING ══ -->
   <div class="page" id="pg-prewedding">
-    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px">
-      <div class="kpi"><div class="kpi-label">Studios</div><div class="kpi-val">12</div></div>
-      <div class="kpi"><div class="kpi-label">Shoots/Month</div><div class="kpi-val">34</div></div>
-      <div class="kpi"><div class="kpi-label">Avg Package</div><div class="kpi-val">₹22K</div></div>
-      <div class="kpi"><div class="kpi-label">Cinematic Films</div><div class="kpi-val">18</div></div>
-      <div class="kpi"><div class="kpi-label">Revenue</div><div class="kpi-val">₹7.4L</div></div>
+
+    <!-- KPIs -->
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:18px">
+      <div class="kpi"><div class="kpi-icon">🎬</div><div class="kpi-label">Studios Listed</div><div class="kpi-val">12</div><div class="kpi-delta up">▲ 3 new</div><div class="kbar"><div class="kfill" style="width:60%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">📸</div><div class="kpi-label">Shoots This Month</div><div class="kpi-val">34</div><div class="kpi-delta up">▲ 8 vs last month</div><div class="kbar"><div class="kfill" style="width:68%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">💰</div><div class="kpi-label">Avg Package Value</div><div class="kpi-val">₹22K</div><div class="kpi-delta up">▲ 12%</div><div class="kbar"><div class="kfill" style="width:44%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">🎞</div><div class="kpi-label">Cinematic Films</div><div class="kpi-val">18</div><div class="kpi-delta up">▲ 4 this month</div><div class="kbar"><div class="kfill" style="width:36%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">₹</div><div class="kpi-label">Total Revenue</div><div class="kpi-val">₹7.4L</div><div class="kpi-delta up">▲ 28%</div><div class="kbar"><div class="kfill" style="width:74%"></div></div></div>
     </div>
+
+    <!-- Package Cards Row -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px">
+
+      <!-- Outdoor Shoot -->
+      <div style="border-radius:14px;overflow:hidden;border:1px solid var(--gray2);box-shadow:0 2px 10px rgba(0,0,0,0.06);transition:all .2s;cursor:pointer" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 28px rgba(0,0,0,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 10px rgba(0,0,0,0.06)';this.style.borderColor='var(--gray2)'">
+        <div style="background:linear-gradient(135deg,#1A4A6B,#2A7AAB);padding:16px;text-align:center">
+          <div style="font-size:36px;margin-bottom:8px">🌅</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#fff">Outdoor Shoot</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.6);margin-top:3px">Nature · Gardens · Beach · Heritage</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--gold2);margin-top:10px">₹15,000</div>
+        </div>
+        <div style="background:var(--white);padding:12px">
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 4 hours shoot</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 100 edited photos</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 2 locations included</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> Online gallery delivery</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px;background:var(--blueb);border-radius:8px;margin-bottom:10px">
+            <span style="font-size:11px;color:var(--blue);font-weight:600">This Month</span>
+            <span style="font-size:16px;font-weight:700;color:var(--blue)">12 bookings</span>
+          </div>
+          <button style="width:100%;padding:8px;background:#1A4A6B;color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer">Book This Package</button>
+        </div>
+      </div>
+
+      <!-- Studio Shoot -->
+      <div style="border-radius:14px;overflow:hidden;border:1px solid var(--gray2);box-shadow:0 2px 10px rgba(0,0,0,0.06);transition:all .2s;cursor:pointer" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 28px rgba(0,0,0,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 10px rgba(0,0,0,0.06)';this.style.borderColor='var(--gray2)'">
+        <div style="background:linear-gradient(135deg,#4A1A6B,#8A3AAB);padding:16px;text-align:center">
+          <div style="font-size:36px;margin-bottom:8px">🎭</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#fff">Studio Shoot</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.6);margin-top:3px">Professional Studio · Backdrops · Lighting</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--gold2);margin-top:10px">₹8,000</div>
+        </div>
+        <div style="background:var(--white);padding:12px">
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 2 hours in studio</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 60 edited photos</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 1 outfit change</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> Professional backdrops</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px;background:#F0E8FF;border-radius:8px;margin-bottom:10px;border:1px solid #C8A0E8">
+            <span style="font-size:11px;color:#5820A0;font-weight:600">This Month</span>
+            <span style="font-size:16px;font-weight:700;color:#5820A0">18 bookings</span>
+          </div>
+          <button style="width:100%;padding:8px;background:#4A1A6B;color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer">Book This Package</button>
+        </div>
+      </div>
+
+      <!-- Cinematic Film -->
+      <div style="border-radius:14px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 4px 16px rgba(201,151,58,0.2);transition:all .2s;cursor:pointer;position:relative" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(201,151,58,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 16px rgba(201,151,58,0.2)'">
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--dark);font-size:9px;font-weight:700;padding:3px 14px;border-radius:0 0 9px 9px;letter-spacing:1px">⭐ MOST POPULAR</div>
+        <div style="background:linear-gradient(135deg,var(--maroon3),var(--maroon));padding:16px;text-align:center;padding-top:26px">
+          <div style="font-size:36px;margin-bottom:8px">🎬</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#fff">Cinematic Film</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.6);margin-top:3px">Drone · Storytelling · Music · Edit</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--gold2);margin-top:10px">₹35,000</div>
+        </div>
+        <div style="background:var(--white);padding:12px">
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> Full day shoot</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> Drone aerial shots</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 5-min cinematic film</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 2 locations · Music edit</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px;background:var(--warnb);border-radius:8px;margin-bottom:10px;border:1px solid var(--warnr)">
+            <span style="font-size:11px;color:var(--warn);font-weight:600">This Month</span>
+            <span style="font-size:16px;font-weight:700;color:var(--warn)">7 bookings</span>
+          </div>
+          <button style="width:100%;padding:8px;background:var(--maroon);color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer">Book This Package</button>
+        </div>
+      </div>
+
+      <!-- Destination -->
+      <div style="border-radius:14px;overflow:hidden;border:1px solid var(--gray2);box-shadow:0 2px 10px rgba(0,0,0,0.06);transition:all .2s;cursor:pointer" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 28px rgba(0,0,0,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 10px rgba(0,0,0,0.06)';this.style.borderColor='var(--gray2)'">
+        <div style="background:linear-gradient(135deg,#1A4A1A,#3A8A3A);padding:16px;text-align:center">
+          <div style="font-size:36px;margin-bottom:8px">✈️</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#fff">Destination Shoot</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.6);margin-top:3px">Puri · Konark · Chilika · Bhubaneswar</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--gold2);margin-top:10px">₹65,000</div>
+        </div>
+        <div style="background:var(--white);padding:12px">
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 2 days shoot</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> Team travel included</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> Puri / Konark locations</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--dark2)"><span style="color:var(--ok)">✓</span> 200 photos + reel</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px;background:var(--okb);border-radius:8px;margin-bottom:10px;border:1px solid var(--okr)">
+            <span style="font-size:11px;color:var(--ok);font-weight:600">This Month</span>
+            <span style="font-size:16px;font-weight:700;color:var(--ok)">4 bookings</span>
+          </div>
+          <button style="width:100%;padding:8px;background:#1A4A1A;color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer">Book This Package</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Two Columns -->
     <div class="g2">
-      <div class="card"><div class="card-hd">Pre-Wedding Packages</div>
-        <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Package</th><th>Includes</th><th>Price</th><th>Bookings</th></tr></thead>
-        <tbody>
-          <tr><td style="font-weight:600">Outdoor Shoot</td><td>4 hrs, 100 edited photos, 2 locations</td><td style="font-weight:600;color:var(--maroon)">₹15,000</td><td>12</td></tr>
-          <tr><td style="font-weight:600">Studio Shoot</td><td>2 hrs studio, 60 photos, 1 outfit change</td><td style="font-weight:600;color:var(--maroon)">₹8,000</td><td>18</td></tr>
-          <tr><td style="font-weight:600">Cinematic Film</td><td>Full day, drone, 5-min film, 2 locations</td><td style="font-weight:600;color:var(--maroon)">₹35,000</td><td>7</td></tr>
-          <tr><td style="font-weight:600">Destination</td><td>2 days Puri/Konark, team travel included</td><td style="font-weight:600;color:var(--maroon)">₹65,000</td><td>4</td></tr>
-        </tbody></table></div>
+
+      <!-- Studios List -->
+      <div class="card">
+        <div class="card-hd">Registered Pre-Wedding Studios <span class="card-lk">+ Add Studio</span></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+
+          <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--gray);border-radius:10px;border:1px solid var(--gray2)">
+            <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--maroon3),var(--maroon));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📸</div>
+            <div style="flex:1">
+              <div style="font-size:13px;font-weight:600;color:var(--dark)">Kalinga Frames Studio</div>
+              <div style="font-size:10px;color:var(--dark3)">Bhubaneswar · Photography + Cinematic</div>
+              <div style="color:var(--gold);font-size:11px;margin-top:2px">★★★★★ 4.9 · 34 pre-wedding shoots</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:12px;font-weight:600;color:var(--ok)">Available</div>
+              <div style="font-size:11px;color:var(--dark3)">₹8K–35K</div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--gray);border-radius:10px;border:1px solid var(--gray2)">
+            <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#4A1A6B,#8A3AAB);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🎬</div>
+            <div style="flex:1">
+              <div style="font-size:13px;font-weight:600;color:var(--dark)">Pixel Vivah Films</div>
+              <div style="font-size:10px;color:var(--dark3)">Bhubaneswar · Cinematic + Drone</div>
+              <div style="color:var(--gold);font-size:11px;margin-top:2px">★★★★★ 4.9 · 28 pre-wedding shoots</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:12px;font-weight:600;color:var(--ok)">Available</div>
+              <div style="font-size:11px;color:var(--dark3)">₹15K–65K</div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--gray);border-radius:10px;border:1px solid var(--gray2)">
+            <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#1A4A6B,#2A7AAB);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🏖</div>
+            <div style="flex:1">
+              <div style="font-size:13px;font-weight:600;color:var(--dark)">Puri Beach Studio</div>
+              <div style="font-size:10px;color:var(--dark3)">Puri · Outdoor · Beach · Konark</div>
+              <div style="color:var(--gold);font-size:11px;margin-top:2px">★★★★☆ 4.7 · 22 pre-wedding shoots</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:12px;font-weight:600;color:var(--err)">Booked May 5</div>
+              <div style="font-size:11px;color:var(--dark3)">₹15K–35K</div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--gray);border-radius:10px;border:1px solid var(--gray2)">
+            <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#1A4A1A,#3A8A3A);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🌿</div>
+            <div style="flex:1">
+              <div style="font-size:13px;font-weight:600;color:var(--dark)">Studio 360 Bhubaneswar</div>
+              <div style="font-size:10px;color:var(--dark3)">Bhubaneswar · Indoor · 360° Setup</div>
+              <div style="color:var(--gold);font-size:11px;margin-top:2px">★★★★☆ 4.5 · 18 pre-wedding shoots</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:12px;font-weight:600;color:var(--warn)">Advance Due</div>
+              <div style="font-size:11px;color:var(--dark3)">₹8K–20K</div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="card"><div class="card-hd">This Month Shoots</div>
-        <div class="tl-item"><div class="tl-dot done">✓</div><div><div class="tl-h">Pixel Vivah Studio — Outdoor</div><div class="tl-s">Apr 28 · Priya & Rohan · ₹15,000</div></div></div>
-        <div class="tl-item"><div class="tl-dot done">✓</div><div><div class="tl-h">Kalinga Frames — Cinematic</div><div class="tl-s">May 2 · Sunita & Amit · ₹35,000</div></div></div>
-        <div class="tl-item"><div class="tl-dot pend">!</div><div><div class="tl-h">Studio 360 Bhubaneswar</div><div class="tl-s">May 5 · Advance pending · ₹8,000</div></div></div>
+
+      <!-- This Month Shoots + Revenue Chart -->
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="card">
+          <div class="card-hd">This Month Shoots</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;gap:10px;padding:10px;background:var(--okb);border-radius:9px;border:1px solid var(--okr)">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--ok);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0">✓</div>
+              <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--dark)">Pixel Vivah Studio — Outdoor</div><div style="font-size:10px;color:var(--dark3)">Apr 28 · Priya & Rohan · ₹15,000</div></div>
+              <span class="b b-ok">Done</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px;background:var(--okb);border-radius:9px;border:1px solid var(--okr)">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--ok);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0">✓</div>
+              <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--dark)">Kalinga Frames — Cinematic Film</div><div style="font-size:10px;color:var(--dark3)">May 2 · Sunita & Amit · ₹35,000</div></div>
+              <span class="b b-ok">Done</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px;background:var(--warnb);border-radius:9px;border:1px solid var(--warnr)">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--warn);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0">!</div>
+              <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--dark)">Studio 360 Bhubaneswar</div><div style="font-size:10px;color:var(--warn)">May 5 · Advance pending · ₹8,000</div></div>
+              <span class="b b-w">Pending</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px;background:var(--blueb);border-radius:9px;border:1px solid var(--bluer)">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0">→</div>
+              <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--dark)">Puri Beach Studio — Destination</div><div style="font-size:10px;color:var(--dark3)">May 10 · Debasish & Kabita · ₹65,000</div></div>
+              <span class="b b-i">Upcoming</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popular Locations -->
+        <div class="card">
+          <div class="card-hd">Popular Shoot Locations</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+            <div style="background:linear-gradient(135deg,#1A4A6B,#2A7AAB);border-radius:10px;padding:12px;text-align:center;cursor:pointer">
+              <div style="font-size:22px;margin-bottom:5px">🏖</div>
+              <div style="font-size:11px;font-weight:600;color:#fff">Puri Beach</div>
+              <div style="font-size:10px;color:rgba(255,255,255,.6)">18 shoots</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#4A3A1A,#8A6A3A);border-radius:10px;padding:12px;text-align:center;cursor:pointer">
+              <div style="font-size:22px;margin-bottom:5px">🏛</div>
+              <div style="font-size:11px;font-weight:600;color:#fff">Konark Temple</div>
+              <div style="font-size:10px;color:rgba(255,255,255,.6)">14 shoots</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#1A4A1A,#3A8A3A);border-radius:10px;padding:12px;text-align:center;cursor:pointer">
+              <div style="font-size:22px;margin-bottom:5px">🦢</div>
+              <div style="font-size:11px;font-weight:600;color:#fff">Chilika Lake</div>
+              <div style="font-size:10px;color:rgba(255,255,255,.6)">9 shoots</div>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 
