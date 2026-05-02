@@ -1239,47 +1239,169 @@ body{font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);mi
 
   <!-- ══ PACKAGES ══ -->
   <div class="page" id="pg-packages">
-    <div class="alert alert-ok"><span>✓</span><div>Package prices shown under every venue listing. Customers see full breakdown before booking. Venue owners can customize their own packages.</div></div>
-    <div class="pkg-grid">
-      <div class="pkg-card">
-        <div class="pkg-hd" style="background:var(--ok)"><span class="pkg-badge" style="background:var(--okb);color:var(--ok)">Budget Friendly</span><div class="pkg-name">Silver Package</div><div class="pkg-guests">Up to 300 guests</div></div>
-        <div class="pkg-body">
-          <div class="pkg-item"><span style="color:var(--dark2)">Mandap / Banquet Hall</span><span style="font-weight:600">₹35,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Catering (300 plates)</span><span style="font-weight:600">₹45,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Basic Flower Decor</span><span style="font-weight:600">₹15,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Lighting & Tent</span><span style="font-weight:600">₹8,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Pandit Ji</span><span style="font-weight:600">₹5,000</span></div>
+
+    <!-- KPIs -->
+    <div class="kgrid" style="margin-bottom:16px">
+      <div class="kpi"><div class="kpi-icon">🎁</div><div class="kpi-label">Total Packages Sold</div><div class="kpi-val">156</div><div class="kpi-delta up">▲ 23 this month</div><div class="kbar"><div class="kfill" style="width:78%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">⭐</div><div class="kpi-label">Most Popular</div><div class="kpi-val">Gold</div><div class="kpi-delta up">47% of all bookings</div><div class="kbar"><div class="kfill" style="width:47%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">₹</div><div class="kpi-label">Package Revenue</div><div class="kpi-val">₹1.84 Cr</div><div class="kpi-delta up">▲ 31% vs last year</div><div class="kbar"><div class="kfill" style="width:65%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">💰</div><div class="kpi-label">Avg Saving per Customer</div><div class="kpi-val">₹42,000</div><div class="kpi-delta up">vs individual booking</div><div class="kbar"><div class="kfill" style="width:55%"></div></div></div>
+    </div>
+
+    <div class="alert alert-ok" style="margin-bottom:16px"><span>✓</span><div>Package prices shown under every venue listing. Customers see full breakdown before booking. <strong>Owners can customize their own packages</strong> from the Owner App.</div></div>
+
+    <!-- 3 Package Cards -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px">
+
+      <!-- Silver -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray2);box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:all .2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+        <div style="background:linear-gradient(135deg,var(--ok),#4A9A5A);padding:20px;text-align:center">
+          <div style="font-size:32px;margin-bottom:8px">🌿</div>
+          <div style="display:inline-block;background:rgba(255,255,255,0.2);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:8px;letter-spacing:1px">BUDGET FRIENDLY</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff">Silver Package</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-top:4px">Up to 300 guests</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#fff;margin-top:12px">₹1,08,000</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.6)">All inclusive · Save ₹18,000</div>
         </div>
-        <div class="pkg-total" style="background:var(--okb);border-top:1px solid var(--okr)"><span>Total Package</span><span style="color:var(--ok);font-size:16px;font-family:'Cormorant Garamond',serif;font-weight:700">₹1,08,000</span></div>
+        <div style="background:var(--white);padding:16px">
+          <div style="font-size:11px;font-weight:700;color:var(--dark3);letter-spacing:.8px;margin-bottom:10px">WHAT'S INCLUDED</div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px">🏛</span><span style="font-size:12px;color:var(--dark2)">Mandap / Banquet Hall</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹35,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px">🍽</span><span style="font-size:12px;color:var(--dark2)">Catering (300 plates)</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹45,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px">🌸</span><span style="font-size:12px;color:var(--dark2)">Basic Flower Decor</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹15,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px">💡</span><span style="font-size:12px;color:var(--dark2)">Lighting & Tent</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹8,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px">🕉</span><span style="font-size:12px;color:var(--dark2)">Pandit Ji (Vedic)</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹5,000</span></div>
+          </div>
+          <div style="height:1px;background:var(--ok);margin:10px 0"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <span style="font-size:13px;font-weight:600;color:var(--dark)">Total Package</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--ok)">₹1,08,000</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px">
+            <div style="background:var(--okb);border-radius:8px;padding:8px;text-align:center;border:1px solid var(--okr)"><div style="font-size:10px;color:var(--ok);font-weight:600">This Month</div><div style="font-size:18px;font-weight:700;color:var(--ok)">12</div></div>
+            <div style="background:var(--gray);border-radius:8px;padding:8px;text-align:center"><div style="font-size:10px;color:var(--dark3);font-weight:600">Total Sold</div><div style="font-size:18px;font-weight:700;color:var(--dark)">48</div></div>
+          </div>
+          <div style="height:6px;background:var(--gray2);border-radius:3px;margin-bottom:12px"><div style="height:100%;width:31%;background:var(--ok);border-radius:3px"></div></div>
+          <button style="width:100%;padding:10px;background:var(--ok);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;cursor:pointer">Book Silver Package</button>
+        </div>
       </div>
-      <div class="pkg-card popular">
-        <div class="pkg-hd" style="background:var(--warn)"><span class="pkg-badge" style="background:var(--warnb);color:var(--warn)">⭐ Most Popular</span><div class="pkg-name">Gold Package</div><div class="pkg-guests">Up to 500 guests</div></div>
-        <div class="pkg-body">
-          <div class="pkg-item"><span style="color:var(--dark2)">Mandap / Hotel Hall</span><span style="font-weight:600">₹65,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Catering (500 plates)</span><span style="font-weight:600">₹75,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Premium Flower Decor</span><span style="font-weight:600">₹30,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Photography + Video</span><span style="font-weight:600">₹35,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">DJ + Band Group</span><span style="font-weight:600">₹25,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Bridal Makeup</span><span style="font-weight:600">₹12,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Event Management</span><span style="font-weight:600">₹15,000</span></div>
+
+      <!-- Gold - Most Popular -->
+      <div style="border-radius:16px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 8px 24px rgba(201,151,58,0.2);transition:all .2s;position:relative" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(201,151,58,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow='0 8px 24px rgba(201,151,58,0.2)'">
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:10px;font-weight:700;padding:4px 16px;border-radius:0 0 10px 10px;letter-spacing:1px;z-index:1">⭐ MOST POPULAR</div>
+        <div style="background:linear-gradient(135deg,var(--maroon3),var(--maroon));padding:20px;text-align:center;padding-top:32px">
+          <div style="font-size:32px;margin-bottom:8px">🏆</div>
+          <div style="display:inline-block;background:var(--gold);color:var(--dark);font-size:10px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:8px;letter-spacing:1px">COMPLETE WEDDING</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff">Gold Package</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-top:4px">Up to 500 guests</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--gold2);margin-top:12px">₹2,57,000</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.6)">All inclusive · Save ₹38,000</div>
         </div>
-        <div class="pkg-total" style="background:var(--warnb);border-top:1px solid var(--warnr)"><span>Total Package</span><span style="color:var(--warn);font-size:16px;font-family:'Cormorant Garamond',serif;font-weight:700">₹2,57,000</span></div>
+        <div style="background:var(--white);padding:16px">
+          <div style="font-size:11px;font-weight:700;color:var(--dark3);letter-spacing:.8px;margin-bottom:10px">WHAT'S INCLUDED</div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:13px">🏛</span><span style="font-size:11.5px;color:var(--dark2)">Mandap / Hotel Hall</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹65,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:13px">🍽</span><span style="font-size:11.5px;color:var(--dark2)">Catering (500 plates)</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹75,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:13px">🌸</span><span style="font-size:11.5px;color:var(--dark2)">Premium Flower Decor</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹30,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:13px">📸</span><span style="font-size:11.5px;color:var(--dark2)">Photography + Video</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹35,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:13px">🎺</span><span style="font-size:11.5px;color:var(--dark2)">DJ + Band Group</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹25,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:13px">💄</span><span style="font-size:11.5px;color:var(--dark2)">Bridal Makeup</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹12,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:13px">🎪</span><span style="font-size:11.5px;color:var(--dark2)">Event Management</span></div><span style="font-size:12px;font-weight:600;color:var(--dark)">₹15,000</span></div>
+          </div>
+          <div style="height:2px;background:var(--gold);margin:10px 0"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <span style="font-size:13px;font-weight:600;color:var(--dark)">Total Package</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--maroon)">₹2,57,000</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px">
+            <div style="background:var(--warnb);border-radius:8px;padding:8px;text-align:center;border:1px solid var(--warnr)"><div style="font-size:10px;color:var(--warn);font-weight:600">This Month</div><div style="font-size:18px;font-weight:700;color:var(--warn)">23</div></div>
+            <div style="background:var(--gray);border-radius:8px;padding:8px;text-align:center"><div style="font-size:10px;color:var(--dark3);font-weight:600">Total Sold</div><div style="font-size:18px;font-weight:700;color:var(--dark)">73</div></div>
+          </div>
+          <div style="height:6px;background:var(--gray2);border-radius:3px;margin-bottom:12px"><div style="height:100%;width:47%;background:var(--gold);border-radius:3px"></div></div>
+          <button style="width:100%;padding:10px;background:var(--maroon);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;cursor:pointer">Book Gold Package</button>
+        </div>
       </div>
-      <div class="pkg-card">
-        <div class="pkg-hd" style="background:var(--maroon)"><span class="pkg-badge" style="background:var(--errb);color:var(--maroon)">All Inclusive</span><div class="pkg-name">Platinum Package</div><div class="pkg-guests">Up to 800 guests</div></div>
-        <div class="pkg-body">
-          <div class="pkg-item"><span style="color:var(--dark2)">Luxury Hall / 5-Star</span><span style="font-weight:600">₹1,10,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Catering (800 plates)</span><span style="font-weight:600">₹1,20,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Luxury Decor + Theme</span><span style="font-weight:600">₹60,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">2 Photo Teams + Drone</span><span style="font-weight:600">₹55,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Cinematic Film</span><span style="font-weight:600">₹40,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">2 Bands + DJ + Sound</span><span style="font-weight:600">₹35,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">Bridal + Family Makeup</span><span style="font-weight:600">₹20,000</span></div>
-          <div class="pkg-item"><span style="color:var(--dark2)">VIP Event Manager</span><span style="font-weight:600">₹25,000</span></div>
+
+      <!-- Platinum -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray2);box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:all .2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+        <div style="background:linear-gradient(135deg,#1A1A3A,#3A3A7A);padding:20px;text-align:center">
+          <div style="font-size:32px;margin-bottom:8px">💎</div>
+          <div style="display:inline-block;background:rgba(255,255,255,0.15);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:8px;letter-spacing:1px">ALL INCLUSIVE LUXURY</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff">Platinum Package</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-top:4px">Up to 800 guests</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#E8C8FF;margin-top:12px">₹4,65,000</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.6)">All inclusive · Save ₹75,000</div>
         </div>
-        <div class="pkg-total" style="background:var(--errb);border-top:1px solid var(--errr)"><span>Total Package</span><span style="color:var(--maroon);font-size:16px;font-family:'Cormorant Garamond',serif;font-weight:700">₹4,65,000</span></div>
+        <div style="background:var(--white);padding:16px">
+          <div style="font-size:11px;font-weight:700;color:var(--dark3);letter-spacing:.8px;margin-bottom:10px">WHAT'S INCLUDED</div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:7px"><span style="font-size:12px">🏨</span><span style="font-size:11px;color:var(--dark2)">Luxury Hall / 5-Star Hotel</span></div><span style="font-size:11.5px;font-weight:600;color:var(--dark)">₹1,10,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:7px"><span style="font-size:12px">🍽</span><span style="font-size:11px;color:var(--dark2)">Catering (800 plates)</span></div><span style="font-size:11.5px;font-weight:600;color:var(--dark)">₹1,20,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:7px"><span style="font-size:12px">🌸</span><span style="font-size:11px;color:var(--dark2)">Luxury Decor + Theme</span></div><span style="font-size:11.5px;font-weight:600;color:var(--dark)">₹60,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:7px"><span style="font-size:12px">📸</span><span style="font-size:11px;color:var(--dark2)">2 Photo Teams + Drone</span></div><span style="font-size:11.5px;font-weight:600;color:var(--dark)">₹55,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:7px"><span style="font-size:12px">🎬</span><span style="font-size:11px;color:var(--dark2)">Cinematic Wedding Film</span></div><span style="font-size:11.5px;font-weight:600;color:var(--dark)">₹40,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:7px"><span style="font-size:12px">🎺</span><span style="font-size:11px;color:var(--dark2)">2 Bands + DJ + Sound</span></div><span style="font-size:11.5px;font-weight:600;color:var(--dark)">₹35,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--gray)"><div style="display:flex;align-items:center;gap:7px"><span style="font-size:12px">💄</span><span style="font-size:11px;color:var(--dark2)">Bridal + Family Makeup</span></div><span style="font-size:11.5px;font-weight:600;color:var(--dark)">₹20,000</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0"><div style="display:flex;align-items:center;gap:7px"><span style="font-size:12px">🎪</span><span style="font-size:11px;color:var(--dark2)">VIP Event Manager</span></div><span style="font-size:11.5px;font-weight:600;color:var(--dark)">₹25,000</span></div>
+          </div>
+          <div style="height:2px;background:#3A3A7A;margin:10px 0"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <span style="font-size:13px;font-weight:600;color:var(--dark)">Total Package</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#3A3A7A">₹4,65,000</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px">
+            <div style="background:var(--blueb);border-radius:8px;padding:8px;text-align:center;border:1px solid var(--bluer)"><div style="font-size:10px;color:var(--blue);font-weight:600">This Month</div><div style="font-size:18px;font-weight:700;color:var(--blue)">4</div></div>
+            <div style="background:var(--gray);border-radius:8px;padding:8px;text-align:center"><div style="font-size:10px;color:var(--dark3);font-weight:600">Total Sold</div><div style="font-size:18px;font-weight:700;color:var(--dark)">35</div></div>
+          </div>
+          <div style="height:6px;background:var(--gray2);border-radius:3px;margin-bottom:12px"><div style="height:100%;width:22%;background:#3A3A7A;border-radius:3px"></div></div>
+          <button style="width:100%;padding:10px;background:linear-gradient(135deg,#1A1A3A,#3A3A7A);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;cursor:pointer">Book Platinum Package</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hotel Bundle Package -->
+    <div class="card">
+      <div class="card-hd">Hotel Wedding Bundle — Stay + Function Package <span class="card-lk">+ Create Custom Package</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="background:var(--blueb);border:1px solid var(--bluer);border-radius:12px;padding:16px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <div style="width:40px;height:40px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:18px">🏨</div>
+            <div><div style="font-size:14px;font-weight:600;color:var(--blue)">Hotel Wedding Bundle</div><div style="font-size:11px;color:var(--dark3)">Stay + Function · 2 days</div></div>
+            <div style="margin-left:auto;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--blue)">₹5,65,000</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(26,58,107,0.1);font-size:11.5px"><span style="color:var(--dark2)">🎊 Grand Ballroom (2 days)</span><span style="font-weight:600;color:var(--dark)">₹2,20,000</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(26,58,107,0.1);font-size:11.5px"><span style="color:var(--dark2)">🍽 Catering (600 plates/day)</span><span style="font-weight:600;color:var(--dark)">₹1,80,000</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(26,58,107,0.1);font-size:11.5px"><span style="color:var(--dark2)">🛏 10 Deluxe Rooms (2 nights)</span><span style="font-weight:600;color:var(--dark)">₹80,000</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(26,58,107,0.1);font-size:11.5px"><span style="color:var(--dark2)">💑 Bridal Suite (2 nights)</span><span style="font-weight:600;color:var(--dark)">₹25,000</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 0;font-size:11.5px"><span style="color:var(--dark2)">🌸 Decoration + Lighting</span><span style="font-weight:600;color:var(--dark)">₹60,000</span></div>
+          </div>
+          <div style="height:1px;background:var(--blue);margin:10px 0;opacity:.3"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:13px;font-weight:600;color:var(--dark)">Total Bundle</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--blue)">₹5,65,000</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="background:var(--gray);border-radius:12px;padding:14px">
+            <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:10px">Package Performance This Month</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--dark2)">🌿 Silver</span><span style="font-weight:600">12 bookings · ₹12.96L</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:30%;background:var(--ok);border-radius:3px"></div></div></div>
+              <div><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--dark2)">🏆 Gold</span><span style="font-weight:600">23 bookings · ₹59.11L</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:60%;background:var(--maroon);border-radius:3px"></div></div></div>
+              <div><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--dark2)">💎 Platinum</span><span style="font-weight:600">4 bookings · ₹18.6L</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:10%;background:#3A3A7A;border-radius:3px"></div></div></div>
+              <div><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px"><span style="color:var(--dark2)">🏨 Hotel Bundle</span><span style="font-weight:600">3 bookings · ₹16.95L</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:8%;background:var(--blue);border-radius:3px"></div></div></div>
+            </div>
+          </div>
+          <div style="background:var(--goldp);border:1px solid #E8D5A0;border-radius:12px;padding:14px">
+            <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:6px">💡 Custom Package Builder</div>
+            <div style="font-size:11px;color:var(--dark3);margin-bottom:10px;line-height:1.6">Create custom packages for specific venues or seasons. Owners can also build their own packages from the Owner App.</div>
+            <button style="width:100%;padding:9px;background:var(--gold);color:var(--dark);border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;cursor:pointer">+ Create Custom Package</button>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 
   <!-- ══ PRE-WEDDING ══ -->
@@ -1311,30 +1433,112 @@ body{font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);mi
 
   <!-- ══ FINANCE ══ -->
   <div class="page" id="pg-finance">
-    <div class="kgrid">
-      <div class="kpi"><div class="kpi-label">Total FY25</div><div class="kpi-val">₹2.84 Cr</div><div class="kpi-delta up">▲ 23%</div><div class="kbar"><div class="kfill" style="width:71%"></div></div></div>
-      <div class="kpi"><div class="kpi-label">Advance Collected</div><div class="kpi-val">₹56.8L</div><div class="kpi-delta up">▲ 18%</div><div class="kbar"><div class="kfill" style="width:58%"></div></div></div>
-      <div class="kpi"><div class="kpi-label">Balance Pending</div><div class="kpi-val">₹38.2L</div><div class="kpi-delta dn">12 overdue</div><div class="kbar"><div class="kfill" style="width:38%;background:#c0392b"></div></div></div>
-      <div class="kpi"><div class="kpi-label">Vendor Payouts</div><div class="kpi-val">₹1.42 Cr</div><div class="kpi-delta">50% of revenue</div><div class="kbar"><div class="kfill" style="width:50%"></div></div></div>
+
+    <!-- KPIs -->
+    <div class="kgrid" style="margin-bottom:16px">
+      <div class="kpi"><div class="kpi-icon">₹</div><div class="kpi-label">Total Revenue FY25</div><div class="kpi-val">₹2.84 Cr</div><div class="kpi-delta up">▲ 23% vs last year</div><div class="kbar"><div class="kfill" style="width:71%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">💰</div><div class="kpi-label">Advance Collected</div><div class="kpi-val">₹56.8L</div><div class="kpi-delta up">▲ 18% this quarter</div><div class="kbar"><div class="kfill" style="width:58%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">⏳</div><div class="kpi-label">Balance Pending</div><div class="kpi-val">₹38.2L</div><div class="kpi-delta dn">12 overdue payments</div><div class="kbar"><div class="kfill" style="width:38%;background:#c0392b"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">🤝</div><div class="kpi-label">Vendor Payouts</div><div class="kpi-val">₹1.42 Cr</div><div class="kpi-delta">50% of total revenue</div><div class="kbar"><div class="kfill" style="width:50%"></div></div></div>
     </div>
+
+    <div class="g2" style="margin-bottom:14px">
+
+      <!-- Revenue Chart -->
+      <div class="card">
+        <div class="card-hd">Revenue Trend (₹ Lakh)</div>
+        <div style="height:200px;position:relative">
+          <canvas id="financeChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Revenue by Venue Type -->
+      <div class="card">
+        <div class="card-hd">Revenue by Venue Type</div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:var(--maroon);display:inline-block"></span>Marriage Mandap</span><span style="font-weight:700;color:var(--dark)">₹1.42 Cr <span style="font-weight:400;color:var(--dark3)">(50%)</span></span></div>
+            <div style="height:8px;background:var(--gray2);border-radius:4px"><div style="height:100%;width:100%;background:var(--maroon);border-radius:4px"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:var(--blue);display:inline-block"></span>Hotels + Banquet</span><span style="font-weight:700;color:var(--dark)">₹84.2L <span style="font-weight:400;color:var(--dark3)">(30%)</span></span></div>
+            <div style="height:8px;background:var(--gray2);border-radius:4px"><div style="height:100%;width:60%;background:var(--blue);border-radius:4px"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:var(--gold);display:inline-block"></span>Catering Service</span><span style="font-weight:700;color:var(--dark)">₹58.4L <span style="font-weight:400;color:var(--dark3)">(21%)</span></span></div>
+            <div style="height:8px;background:var(--gray2);border-radius:4px"><div style="height:100%;width:41%;background:var(--gold);border-radius:4px"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:var(--ok);display:inline-block"></span>Photography & Video</span><span style="font-weight:700;color:var(--dark)">₹41.9L <span style="font-weight:400;color:var(--dark3)">(15%)</span></span></div>
+            <div style="height:8px;background:var(--gray2);border-radius:4px"><div style="height:100%;width:30%;background:var(--ok);border-radius:4px"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#6B3E20;display:inline-block"></span>Other Services</span><span style="font-weight:700;color:var(--dark)">₹57.5L <span style="font-weight:400;color:var(--dark3)">(20%)</span></span></div>
+            <div style="height:8px;background:var(--gray2);border-radius:4px"><div style="height:100%;width:20%;background:#6B3E20;border-radius:4px"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="g2">
-      <div class="card"><div class="card-hd">Revenue by Service</div>
-        <div class="pr"><div class="pr-top"><span>Mandap Booking</span><span style="font-weight:600">₹84.2L</span></div><div class="pr-tr"><div class="pr-fi" style="width:100%"></div></div></div>
-        <div class="pr"><div class="pr-top"><span>Catering</span><span style="font-weight:600">₹58.4L</span></div><div class="pr-tr"><div class="pr-fi" style="width:69%"></div></div></div>
-        <div class="pr"><div class="pr-top"><span>Photography & Video</span><span style="font-weight:600">₹41.9L</span></div><div class="pr-tr"><div class="pr-fi" style="width:50%"></div></div></div>
-        <div class="pr"><div class="pr-top"><span>Hotel Packages</span><span style="font-weight:600">₹38.2L</span></div><div class="pr-tr"><div class="pr-fi" style="width:45%"></div></div></div>
-        <div class="pr"><div class="pr-top"><span>Pre-Wedding</span><span style="font-weight:600">₹7.4L</span></div><div class="pr-tr"><div class="pr-fi" style="width:9%"></div></div></div>
+      <!-- Recent Transactions -->
+      <div class="card">
+        <div class="card-hd">Recent Transactions <span class="card-lk">View all →</span></div>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>Date</th><th>Booking ID</th><th>Couple</th><th>Type</th><th>Amount</th><th>Mode</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Apr 27</td><td style="color:var(--gold);font-weight:600">VIV-0187</td><td>Priya & Rohan</td><td><span class="b b-ok">Advance</span></td><td style="font-weight:700">₹51,400</td><td><span style="font-size:11px">📱 UPI</span></td><td><span class="b b-ok">Success</span></td></tr>
+              <tr><td>Apr 26</td><td style="color:var(--gold);font-weight:600">VIV-0186</td><td>Sunita & Amit</td><td><span class="b b-i">Balance</span></td><td style="font-weight:700">₹3,72,000</td><td><span style="font-size:11px">🏦 NEFT</span></td><td><span class="b b-ok">Success</span></td></tr>
+              <tr><td>Apr 25</td><td style="color:var(--gold);font-weight:600">VIV-0182</td><td>Debasish & Kabita</td><td><span class="b b-ok">Advance</span></td><td style="font-weight:700">₹35,000</td><td><span style="font-size:11px">📱 UPI</span></td><td><span class="b b-ok">Success</span></td></tr>
+              <tr><td>Apr 24</td><td style="color:var(--gold);font-weight:600">VIV-0180</td><td>Tapan & Rina</td><td><span class="b b-g">Full Pay</span></td><td style="font-weight:700">₹95,000</td><td><span style="font-size:11px">🏦 RTGS</span></td><td><span class="b b-ok">Success</span></td></tr>
+              <tr><td>Apr 23</td><td style="color:var(--gold);font-weight:600">VIV-0179</td><td>Tapan & Kabita</td><td><span class="b b-i">Balance</span></td><td style="font-weight:700">₹2,05,600</td><td><span style="font-size:11px">💳 Card</span></td><td><span class="b b-ok">Success</span></td></tr>
+              <tr><td>Apr 22</td><td style="color:var(--err);font-weight:600">VIV-0178</td><td>Mamata & Sanjay</td><td><span class="b b-w">Advance</span></td><td style="font-weight:700;color:var(--err)">₹42,000</td><td><span style="font-size:11px">📱 UPI</span></td><td><span class="b b-e">Failed</span></td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="card"><div class="card-hd">Recent Transactions</div>
-        <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Date</th><th>Booking</th><th>Type</th><th>Amount</th><th>Mode</th></tr></thead>
-        <tbody>
-          <tr><td>Apr 27</td><td>VIV-0187</td><td><span class="b b-ok">Advance</span></td><td style="font-weight:600">₹51,400</td><td>UPI</td></tr>
-          <tr><td>Apr 26</td><td>VIV-0186</td><td><span class="b b-i">Balance</span></td><td style="font-weight:600">₹3,72,000</td><td>NEFT</td></tr>
-          <tr><td>Apr 25</td><td>VIV-0182</td><td><span class="b b-ok">Advance</span></td><td style="font-weight:600">₹35,000</td><td>UPI</td></tr>
-          <tr><td>Apr 24</td><td>VIV-0180</td><td><span class="b b-g">Full Pay</span></td><td style="font-weight:600">₹95,000</td><td>RTGS</td></tr>
-        </tbody></table></div>
+
+      <!-- Overdue + Summary -->
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <!-- Overdue Payments -->
+        <div class="card">
+          <div class="card-hd" style="color:var(--err)">⚠️ Overdue Payments (12)</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;background:var(--errb);border:1px solid var(--errr);border-radius:9px">
+              <div><div style="font-size:12px;font-weight:600;color:var(--err)">VIV-0185 · Mamata & Sanjay</div><div style="font-size:10px;color:var(--dark3)">Event May 1 · 2 days away</div></div>
+              <div style="text-align:right"><div style="font-size:13px;font-weight:700;color:var(--err)">₹42,000</div><button style="font-size:10px;padding:3px 9px;background:var(--err);color:#fff;border:none;border-radius:6px;cursor:pointer;font-family:'Outfit',sans-serif;margin-top:3px">🔔 Remind</button></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;background:var(--warnb);border:1px solid var(--warnr);border-radius:9px">
+              <div><div style="font-size:12px;font-weight:600;color:var(--warn)">VIV-0176 · Bikash & Sarita</div><div style="font-size:10px;color:var(--dark3)">Event May 8 · 9 days away</div></div>
+              <div style="text-align:right"><div style="font-size:13px;font-weight:700;color:var(--warn)">₹32,000</div><button style="font-size:10px;padding:3px 9px;background:var(--warn);color:#fff;border:none;border-radius:6px;cursor:pointer;font-family:'Outfit',sans-serif;margin-top:3px">🔔 Remind</button></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;background:var(--warnb);border:1px solid var(--warnr);border-radius:9px">
+              <div><div style="font-size:12px;font-weight:600;color:var(--warn)">VIV-0172 · Rajesh & Anita</div><div style="font-size:10px;color:var(--dark3)">Event May 12 · 13 days away</div></div>
+              <div style="text-align:right"><div style="font-size:13px;font-weight:700;color:var(--warn)">₹27,000</div><button style="font-size:10px;padding:3px 9px;background:var(--warn);color:#fff;border:none;border-radius:6px;cursor:pointer;font-family:'Outfit',sans-serif;margin-top:3px">🔔 Remind</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform Commission -->
+        <div class="card">
+          <div class="card-hd">Platform Commission Summary</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div style="background:var(--goldp);border-radius:10px;padding:12px;text-align:center;border:1px solid #E8D5A0">
+              <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:4px">TOTAL COMMISSION</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--maroon)">₹22.7L</div>
+              <div style="font-size:10px;color:var(--dark3)">8% of total revenue</div>
+            </div>
+            <div style="background:var(--okb);border-radius:10px;padding:12px;text-align:center;border:1px solid var(--okr)">
+              <div style="font-size:10px;color:var(--ok);font-weight:600;margin-bottom:4px">THIS MONTH</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--ok)">₹2.84L</div>
+              <div style="font-size:10px;color:var(--dark3)">↑ 12% vs last month</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 
   <!-- ══ REPORTS ══ -->
@@ -1512,6 +1716,23 @@ function filterVendorTab(el,cat){
 
 // Revenue Chart
 window.addEventListener('load',()=>{
+
+  // Finance Chart
+  const fcCtx = document.getElementById('financeChart');
+  if(fcCtx){
+    new Chart(fcCtx,{
+      type:'line',
+      data:{
+        labels:['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar'],
+        datasets:[
+          {label:'Revenue',data:[18,22,28,35,42,38,45,52,48,62,71,84],borderColor:'#C9973A',backgroundColor:'rgba(201,151,58,0.1)',tension:.4,fill:true,pointBackgroundColor:'#C9973A',pointRadius:4},
+          {label:'Collections',data:[12,16,20,28,35,30,38,44,40,52,60,70],borderColor:'#2D6A3F',backgroundColor:'rgba(45,106,63,0.05)',tension:.4,fill:false,pointBackgroundColor:'#2D6A3F',pointRadius:4}
+        ]
+      },
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{font:{size:10},padding:8}}},scales:{y:{beginAtZero:true,grid:{color:'#F0EBE0'},ticks:{font:{size:10},color:'#6B3E20'}},x:{grid:{display:false},ticks:{font:{size:10},color:'#6B3E20'}}}}
+    });
+  }
+
   const rCtx=document.getElementById('revenueChart');
   if(rCtx){
     new Chart(rCtx,{
