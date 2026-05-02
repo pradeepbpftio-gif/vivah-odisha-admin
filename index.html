@@ -911,22 +911,330 @@ body{font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);mi
 
   <!-- ══ VENDORS ══ -->
   <div class="page" id="pg-vendors">
+
+    <!-- KPI Row -->
+    <div class="kgrid" style="margin-bottom:16px">
+      <div class="kpi"><div class="kpi-icon">🤝</div><div class="kpi-label">Total Vendors</div><div class="kpi-val">134</div><div class="kpi-delta up">▲ 18 this month</div><div class="kbar"><div class="kfill" style="width:67%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">✓</div><div class="kpi-label">Verified Vendors</div><div class="kpi-val">108</div><div class="kpi-delta up">81% verified</div><div class="kbar"><div class="kfill" style="width:81%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">⭐</div><div class="kpi-label">Avg Platform Rating</div><div class="kpi-val">4.6</div><div class="kpi-delta up">▲ 0.2 pts this month</div><div class="kbar"><div class="kfill" style="width:92%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">📅</div><div class="kpi-label">Active This Month</div><div class="kpi-val">87</div><div class="kpi-delta">65% utilization rate</div><div class="kbar"><div class="kfill" style="width:65%"></div></div></div>
+    </div>
+
+    <!-- Search + Add -->
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <input class="tb-search" style="width:220px" placeholder="🔍 Search vendors, category...">
+        <select style="border:1px solid var(--gray2);border-radius:8px;padding:7px 12px;font-size:12px;font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);outline:none">
+          <option>All Districts</option><option>Khordha</option><option>Cuttack</option><option>Puri</option><option>Ganjam</option><option>Sambalpur</option>
+        </select>
+        <select style="border:1px solid var(--gray2);border-radius:8px;padding:7px 12px;font-size:12px;font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);outline:none">
+          <option>Sort by Rating ↓</option><option>Sort by Bookings ↓</option><option>Sort by Name A-Z</option><option>Newest First</option>
+        </select>
+      </div>
+      <button style="background:var(--maroon);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:6px">+ Add New Vendor</button>
+    </div>
+
+    <!-- Tabs -->
     <div class="tabs">
       <div class="tab active" onclick="filterVendorTab(this,'all')">All (134)</div>
-      <div class="tab" onclick="filterVendorTab(this,'catering')">Catering (28)</div>
-      <div class="tab" onclick="filterVendorTab(this,'photography')">Photography (22)</div>
-      <div class="tab" onclick="filterVendorTab(this,'decoration')">Decoration (18)</div>
-      <div class="tab" onclick="filterVendorTab(this,'band')">Band & DJ (15)</div>
-      <div class="tab" onclick="filterVendorTab(this,'makeup')">Makeup (12)</div>
+      <div class="tab" onclick="filterVendorTab(this,'catering')">🍽 Catering (28)</div>
+      <div class="tab" onclick="filterVendorTab(this,'photography')">📸 Photography (22)</div>
+      <div class="tab" onclick="filterVendorTab(this,'decoration')">🌸 Decoration (18)</div>
+      <div class="tab" onclick="filterVendorTab(this,'band')">🎺 Band & DJ (15)</div>
+      <div class="tab" onclick="filterVendorTab(this,'makeup')">💄 Makeup (12)</div>
+      <div class="tab" onclick="filterVendorTab(this,'prewedding')">💑 Pre-Wedding (8)</div>
     </div>
-    <div class="vnd-grid">
-      <div class="vnd-card"><div class="vnd-hd"><div class="vnd-ic">📸</div><div><div class="vnd-nm">Kalinga Frames Studio</div><div class="vnd-cat">Photography + Video · Pan Odisha</div></div></div><div class="vnd-stars">★★★★★ 4.9 · 89 weddings</div><div class="adv-badge"><div class="adv-l">Min. Advance Required</div><div class="adv-v">₹8,000 (30%)</div></div><div style="display:flex;flex-wrap:wrap"><span class="port-link">▶ Wedding Reel</span><span class="port-link">▶ Cinematic</span><span class="port-link">▶ Pre-Wed</span></div><div style="font-size:11px;color:var(--ok);margin-top:8px">📞 +91 98765 43210</div><div style="font-size:11px;color:#1A7A35">💬 WhatsApp</div><button class="vnd-btn">View Full Profile</button></div>
-      <div class="vnd-card"><div class="vnd-hd"><div class="vnd-ic">🍽</div><div><div class="vnd-nm">Swagat Catering Services</div><div class="vnd-cat">Catering · Bhubaneswar & Cuttack</div></div></div><div class="vnd-stars">★★★★★ 4.8 · 143 events</div><div class="adv-badge"><div class="adv-l">Min. Advance Required</div><div class="adv-v">₹5,000 (25%)</div></div><div style="display:flex;flex-wrap:wrap"><span class="port-link">📄 Menu PDF</span><span class="port-link">📋 Sample Menu</span></div><div style="font-size:11px;color:var(--ok);margin-top:8px">📞 +91 98765 43211</div><div style="font-size:11px;color:#1A7A35">💬 WhatsApp</div><button class="vnd-btn">View Full Profile</button></div>
-      <div class="vnd-card"><div class="vnd-hd"><div class="vnd-ic">💄</div><div><div class="vnd-nm">Sohagi Bridal Studio</div><div class="vnd-cat">Bridal Makeup · Pan Odisha</div></div></div><div class="vnd-stars">★★★★★ 4.9 · 97 brides</div><div class="adv-badge"><div class="adv-l">Min. Advance Required</div><div class="adv-v">₹3,000 (25%)</div></div><div style="display:flex;flex-wrap:wrap"><span class="port-link">▶ Before/After</span><span class="port-link">📸 Portfolio</span></div><div style="font-size:11px;color:var(--ok);margin-top:8px">📞 +91 98765 43222</div><div style="font-size:11px;color:#1A7A35">💬 WhatsApp</div><button class="vnd-btn">View Full Profile</button></div>
-      <div class="vnd-card"><div class="vnd-hd"><div class="vnd-ic">🌸</div><div><div class="vnd-nm">Pushpa Decorators</div><div class="vnd-cat">Flower Decor · Bhubaneswar, Puri</div></div></div><div class="vnd-stars">★★★★☆ 4.7 · 312 events</div><div class="adv-badge"><div class="adv-l">Min. Advance Required</div><div class="adv-v">₹4,000 (20%)</div></div><div style="display:flex;flex-wrap:wrap"><span class="port-link">📸 Gallery</span><span class="port-link">▶ Showcase</span></div><div style="font-size:11px;color:var(--ok);margin-top:8px">📞 +91 98765 43233</div><div style="font-size:11px;color:#1A7A35">💬 WhatsApp</div><button class="vnd-btn">View Full Profile</button></div>
-      <div class="vnd-card"><div class="vnd-hd"><div class="vnd-ic">🎺</div><div><div class="vnd-nm">Utkal Band Group</div><div class="vnd-cat">Traditional Band · Cuttack</div></div></div><div class="vnd-stars">★★★★☆ 4.5 · 210 events</div><div class="adv-badge"><div class="adv-l">Min. Advance Required</div><div class="adv-v">₹3,000 (20%)</div></div><div style="display:flex;flex-wrap:wrap"><span class="port-link">▶ Performance</span><span class="port-link">▶ Baraat Reel</span></div><div style="font-size:11px;color:var(--ok);margin-top:8px">📞 +91 98765 43244</div><div style="font-size:11px;color:#1A7A35">💬 WhatsApp</div><button class="vnd-btn">View Full Profile</button></div>
-      <div class="vnd-card"><div class="vnd-hd"><div class="vnd-ic">🎵</div><div><div class="vnd-nm">Sonic DJ Systems</div><div class="vnd-cat">DJ & Sound · Sambalpur, Rourkela</div></div></div><div class="vnd-stars">★★★★☆ 4.5 · 186 events</div><div class="adv-badge"><div class="adv-l">Min. Advance Required</div><div class="adv-v">₹4,000 (20%)</div></div><div style="display:flex;flex-wrap:wrap"><span class="port-link">▶ LED Setup</span><span class="port-link">▶ Sound Demo</span></div><div style="font-size:11px;color:var(--ok);margin-top:8px">📞 +91 98765 43255</div><div style="font-size:11px;color:#1A7A35">💬 WhatsApp</div><button class="vnd-btn">View Full Profile</button></div>
+
+    <!-- Vendor Grid -->
+    <div class="vnd-grid" id="vendor-grid">
+
+      <!-- Kalinga Frames -->
+      <div class="vnd-card" style="border:1px solid var(--gray2);border-radius:14px;padding:0;overflow:hidden;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)';this.style.borderColor='var(--gold)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--gray2)'">
+        <div style="background:linear-gradient(135deg,var(--maroon3),var(--maroon));padding:14px 14px 10px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📸</div>
+              <div><div style="font-size:14px;font-weight:600;color:#fff">Kalinga Frames Studio</div><div style="font-size:10px;color:rgba(255,255,255,0.6)">Photography + Video · Pan Odisha</div></div>
+            </div>
+            <span style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px">✓ Verified</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;margin-top:10px">
+            <span style="color:var(--gold2);font-size:13px">★★★★★</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.8);font-weight:600">4.9</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.5)">· 89 weddings</span>
+            <span style="margin-left:auto;background:var(--okb);color:var(--ok);border-radius:20px;padding:2px 8px;font-size:9px;font-weight:700">Available</span>
+          </div>
+        </div>
+        <div style="padding:12px 14px">
+          <div style="background:var(--goldp);border:1px solid #E8D5A0;border-radius:8px;padding:9px 12px;margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:2px">MIN. ADVANCE TO BOOK</div>
+            <div style="font-size:16px;font-weight:700;color:var(--maroon)">₹8,000 <span style="font-size:11px;color:var(--dark3);font-weight:400">(30% of total)</span></div>
+          </div>
+          <div style="margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:5px">PAST WORK PORTFOLIO</div>
+            <div style="display:flex;gap:5px;flex-wrap:wrap">
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ Wedding Reel</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ Cinematic Film</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ Pre-Wedding</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">🖼 Portfolio</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:6px;margin-bottom:10px">
+            <div style="flex:1;background:var(--okb);border:1px solid var(--okr);border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">📞</span>
+              <div><div style="font-size:10px;font-weight:600;color:var(--ok)">Call</div><div style="font-size:10px;color:var(--dark3)">+91 98765 43210</div></div>
+            </div>
+            <div style="flex:1;background:#E7F9EC;border:1px solid #A8E0B5;border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">💬</span>
+              <div><div style="font-size:10px;font-weight:600;color:#1A7A35">WhatsApp</div><div style="font-size:10px;color:var(--dark3)">Chat directly</div></div>
+            </div>
+          </div>
+          <button style="width:100%;padding:9px;background:var(--dark);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .15s" onmouseover="this.style.background='var(--maroon)'" onmouseout="this.style.background='var(--dark)'">View Full Profile →</button>
+        </div>
+      </div>
+
+      <!-- Swagat Catering -->
+      <div class="vnd-card" style="border:1px solid var(--gray2);border-radius:14px;padding:0;overflow:hidden;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)';this.style.borderColor='var(--gold)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--gray2)'">
+        <div style="background:linear-gradient(135deg,#1A4A10,#2D7A20);padding:14px 14px 10px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🍽</div>
+              <div><div style="font-size:14px;font-weight:600;color:#fff">Swagat Catering Services</div><div style="font-size:10px;color:rgba(255,255,255,0.6)">Catering · Bhubaneswar & Cuttack</div></div>
+            </div>
+            <span style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px">✓ Verified</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;margin-top:10px">
+            <span style="color:var(--gold2);font-size:13px">★★★★★</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.8);font-weight:600">4.8</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.5)">· 143 events</span>
+            <span style="margin-left:auto;background:var(--okb);color:var(--ok);border-radius:20px;padding:2px 8px;font-size:9px;font-weight:700">Available</span>
+          </div>
+        </div>
+        <div style="padding:12px 14px">
+          <div style="background:var(--goldp);border:1px solid #E8D5A0;border-radius:8px;padding:9px 12px;margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:2px">MIN. ADVANCE TO BOOK</div>
+            <div style="font-size:16px;font-weight:700;color:var(--maroon)">₹5,000 <span style="font-size:11px;color:var(--dark3);font-weight:400">(25% of total)</span></div>
+          </div>
+          <div style="margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:5px">MENU & SAMPLES</div>
+            <div style="display:flex;gap:5px;flex-wrap:wrap">
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">📄 Menu PDF</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">📋 Sample Menu</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">🍱 Food Gallery</span>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px;font-size:10px;color:var(--dark3)">
+            <div style="background:var(--gray);border-radius:7px;padding:6px 8px"><span style="font-weight:600;color:var(--dark)">Cuisine:</span> Odia + N.Indian</div>
+            <div style="background:var(--gray);border-radius:7px;padding:6px 8px"><span style="font-weight:600;color:var(--dark)">Per Plate:</span> ₹350–600</div>
+          </div>
+          <div style="display:flex;gap:6px;margin-bottom:10px">
+            <div style="flex:1;background:var(--okb);border:1px solid var(--okr);border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">📞</span>
+              <div><div style="font-size:10px;font-weight:600;color:var(--ok)">Call</div><div style="font-size:10px;color:var(--dark3)">+91 98765 43211</div></div>
+            </div>
+            <div style="flex:1;background:#E7F9EC;border:1px solid #A8E0B5;border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">💬</span>
+              <div><div style="font-size:10px;font-weight:600;color:#1A7A35">WhatsApp</div><div style="font-size:10px;color:var(--dark3)">Chat directly</div></div>
+            </div>
+          </div>
+          <button style="width:100%;padding:9px;background:var(--dark);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .15s" onmouseover="this.style.background='var(--maroon)'" onmouseout="this.style.background='var(--dark)'">View Full Profile →</button>
+        </div>
+      </div>
+
+      <!-- Sohagi Bridal -->
+      <div class="vnd-card" style="border:1px solid var(--gray2);border-radius:14px;padding:0;overflow:hidden;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)';this.style.borderColor='var(--gold)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--gray2)'">
+        <div style="background:linear-gradient(135deg,#6B1A4A,#A02070);padding:14px 14px 10px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">💄</div>
+              <div><div style="font-size:14px;font-weight:600;color:#fff">Sohagi Bridal Studio</div><div style="font-size:10px;color:rgba(255,255,255,0.6)">Bridal Makeup · Pan Odisha travel</div></div>
+            </div>
+            <span style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px">✓ Verified</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;margin-top:10px">
+            <span style="color:var(--gold2);font-size:13px">★★★★★</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.8);font-weight:600">4.9</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.5)">· 97 brides</span>
+            <span style="margin-left:auto;background:var(--errb);color:var(--err);border-radius:20px;padding:2px 8px;font-size:9px;font-weight:700">Fully Booked</span>
+          </div>
+        </div>
+        <div style="padding:12px 14px">
+          <div style="background:var(--goldp);border:1px solid #E8D5A0;border-radius:8px;padding:9px 12px;margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:2px">MIN. ADVANCE TO BOOK</div>
+            <div style="font-size:16px;font-weight:700;color:var(--maroon)">₹3,000 <span style="font-size:11px;color:var(--dark3);font-weight:400">(25% of total)</span></div>
+          </div>
+          <div style="margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:5px">PORTFOLIO & WORK</div>
+            <div style="display:flex;gap:5px;flex-wrap:wrap">
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ Before/After</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">📸 Portfolio</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ Reel</span>
+            </div>
+          </div>
+          <div style="background:var(--warnb);border:1px solid var(--warnr);border-radius:8px;padding:8px 10px;margin-bottom:10px;font-size:11px;color:var(--warn)">
+            ⚠️ Fully booked till Jun 2025 · Next available: July 2025
+          </div>
+          <div style="display:flex;gap:6px;margin-bottom:10px">
+            <div style="flex:1;background:var(--okb);border:1px solid var(--okr);border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">📞</span>
+              <div><div style="font-size:10px;font-weight:600;color:var(--ok)">Call</div><div style="font-size:10px;color:var(--dark3)">+91 98765 43222</div></div>
+            </div>
+            <div style="flex:1;background:#E7F9EC;border:1px solid #A8E0B5;border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">💬</span>
+              <div><div style="font-size:10px;font-weight:600;color:#1A7A35">WhatsApp</div><div style="font-size:10px;color:var(--dark3)">Chat directly</div></div>
+            </div>
+          </div>
+          <button style="width:100%;padding:9px;background:var(--dark);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .15s" onmouseover="this.style.background='var(--maroon)'" onmouseout="this.style.background='var(--dark)'">View Full Profile →</button>
+        </div>
+      </div>
+
+      <!-- Pushpa Decorators -->
+      <div class="vnd-card" style="border:1px solid var(--gray2);border-radius:14px;padding:0;overflow:hidden;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)';this.style.borderColor='var(--gold)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--gray2)'">
+        <div style="background:linear-gradient(135deg,#3A6B20,#6BAA40);padding:14px 14px 10px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🌸</div>
+              <div><div style="font-size:14px;font-weight:600;color:#fff">Pushpa Decorators</div><div style="font-size:10px;color:rgba(255,255,255,0.6)">Flower Decor · Bhubaneswar, Puri</div></div>
+            </div>
+            <span style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px">✓ Verified</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;margin-top:10px">
+            <span style="color:var(--gold2);font-size:13px">★★★★☆</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.8);font-weight:600">4.7</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.5)">· 312 events</span>
+            <span style="margin-left:auto;background:var(--okb);color:var(--ok);border-radius:20px;padding:2px 8px;font-size:9px;font-weight:700">Available</span>
+          </div>
+        </div>
+        <div style="padding:12px 14px">
+          <div style="background:var(--goldp);border:1px solid #E8D5A0;border-radius:8px;padding:9px 12px;margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:2px">MIN. ADVANCE TO BOOK</div>
+            <div style="font-size:16px;font-weight:700;color:var(--maroon)">₹4,000 <span style="font-size:11px;color:var(--dark3);font-weight:400">(20% of total)</span></div>
+          </div>
+          <div style="margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:5px">PORTFOLIO</div>
+            <div style="display:flex;gap:5px;flex-wrap:wrap">
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">📸 Gallery</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ Showcase</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">🌺 Catalogue</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:6px;margin-bottom:10px">
+            <div style="flex:1;background:var(--okb);border:1px solid var(--okr);border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">📞</span>
+              <div><div style="font-size:10px;font-weight:600;color:var(--ok)">Call</div><div style="font-size:10px;color:var(--dark3)">+91 98765 43233</div></div>
+            </div>
+            <div style="flex:1;background:#E7F9EC;border:1px solid #A8E0B5;border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">💬</span>
+              <div><div style="font-size:10px;font-weight:600;color:#1A7A35">WhatsApp</div><div style="font-size:10px;color:var(--dark3)">Chat directly</div></div>
+            </div>
+          </div>
+          <button style="width:100%;padding:9px;background:var(--dark);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .15s" onmouseover="this.style.background='var(--maroon)'" onmouseout="this.style.background='var(--dark)'">View Full Profile →</button>
+        </div>
+      </div>
+
+      <!-- Utkal Band -->
+      <div class="vnd-card" style="border:1px solid var(--gray2);border-radius:14px;padding:0;overflow:hidden;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)';this.style.borderColor='var(--gold)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--gray2)'">
+        <div style="background:linear-gradient(135deg,#6B4A10,#C9973A);padding:14px 14px 10px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🎺</div>
+              <div><div style="font-size:14px;font-weight:600;color:#fff">Utkal Band Group</div><div style="font-size:10px;color:rgba(255,255,255,0.6)">Traditional Band · Cuttack</div></div>
+            </div>
+            <span style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px">✓ Verified</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;margin-top:10px">
+            <span style="color:var(--gold2);font-size:13px">★★★★☆</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.8);font-weight:600">4.5</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.5)">· 210 events</span>
+            <span style="margin-left:auto;background:var(--okb);color:var(--ok);border-radius:20px;padding:2px 8px;font-size:9px;font-weight:700">Available</span>
+          </div>
+        </div>
+        <div style="padding:12px 14px">
+          <div style="background:var(--goldp);border:1px solid #E8D5A0;border-radius:8px;padding:9px 12px;margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:2px">MIN. ADVANCE TO BOOK</div>
+            <div style="font-size:16px;font-weight:700;color:var(--maroon)">₹3,000 <span style="font-size:11px;color:var(--dark3);font-weight:400">(20% of total)</span></div>
+          </div>
+          <div style="margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:5px">PERFORMANCE VIDEOS</div>
+            <div style="display:flex;gap:5px;flex-wrap:wrap">
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ Performance</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ Baraat Reel</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">🎵 Audio Sample</span>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px;font-size:10px;color:var(--dark3)">
+            <div style="background:var(--gray);border-radius:7px;padding:6px 8px"><span style="font-weight:600;color:var(--dark)">Team:</span> 25 members</div>
+            <div style="background:var(--gray);border-radius:7px;padding:6px 8px"><span style="font-weight:600;color:var(--dark)">Price:</span> ₹15K–30K</div>
+          </div>
+          <div style="display:flex;gap:6px;margin-bottom:10px">
+            <div style="flex:1;background:var(--okb);border:1px solid var(--okr);border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">📞</span>
+              <div><div style="font-size:10px;font-weight:600;color:var(--ok)">Call</div><div style="font-size:10px;color:var(--dark3)">+91 98765 43244</div></div>
+            </div>
+            <div style="flex:1;background:#E7F9EC;border:1px solid #A8E0B5;border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">💬</span>
+              <div><div style="font-size:10px;font-weight:600;color:#1A7A35">WhatsApp</div><div style="font-size:10px;color:var(--dark3)">Chat directly</div></div>
+            </div>
+          </div>
+          <button style="width:100%;padding:9px;background:var(--dark);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .15s" onmouseover="this.style.background='var(--maroon)'" onmouseout="this.style.background='var(--dark)'">View Full Profile →</button>
+        </div>
+      </div>
+
+      <!-- Sonic DJ -->
+      <div class="vnd-card" style="border:1px solid var(--gray2);border-radius:14px;padding:0;overflow:hidden;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)';this.style.borderColor='var(--gold)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--gray2)'">
+        <div style="background:linear-gradient(135deg,#1A1A4A,#3A3A8A);padding:14px 14px 10px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🎵</div>
+              <div><div style="font-size:14px;font-weight:600;color:#fff">Sonic DJ Systems</div><div style="font-size:10px;color:rgba(255,255,255,0.6)">DJ & Sound · Sambalpur, Rourkela</div></div>
+            </div>
+            <span style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px">✓ Verified</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;margin-top:10px">
+            <span style="color:var(--gold2);font-size:13px">★★★★☆</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.8);font-weight:600">4.5</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.5)">· 186 events</span>
+            <span style="margin-left:auto;background:var(--okb);color:var(--ok);border-radius:20px;padding:2px 8px;font-size:9px;font-weight:700">Available</span>
+          </div>
+        </div>
+        <div style="padding:12px 14px">
+          <div style="background:var(--goldp);border:1px solid #E8D5A0;border-radius:8px;padding:9px 12px;margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:2px">MIN. ADVANCE TO BOOK</div>
+            <div style="font-size:16px;font-weight:700;color:var(--maroon)">₹4,000 <span style="font-size:11px;color:var(--dark3);font-weight:400">(20% of total)</span></div>
+          </div>
+          <div style="margin-bottom:10px">
+            <div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:5px">SETUP DEMOS</div>
+            <div style="display:flex;gap:5px;flex-wrap:wrap">
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ LED Setup</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">▶ Sound Demo</span>
+              <span style="font-size:10px;padding:3px 9px;background:var(--blueb);color:var(--blue);border-radius:20px;cursor:pointer;border:1px solid var(--bluer)">📸 Equipment</span>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px;font-size:10px;color:var(--dark3)">
+            <div style="background:var(--gray);border-radius:7px;padding:6px 8px"><span style="font-weight:600;color:var(--dark)">Specialty:</span> LED Dance Floor</div>
+            <div style="background:var(--gray);border-radius:7px;padding:6px 8px"><span style="font-weight:600;color:var(--dark)">Price:</span> ₹18K–40K</div>
+          </div>
+          <div style="display:flex;gap:6px;margin-bottom:10px">
+            <div style="flex:1;background:var(--okb);border:1px solid var(--okr);border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">📞</span>
+              <div><div style="font-size:10px;font-weight:600;color:var(--ok)">Call</div><div style="font-size:10px;color:var(--dark3)">+91 98765 43255</div></div>
+            </div>
+            <div style="flex:1;background:#E7F9EC;border:1px solid #A8E0B5;border-radius:8px;padding:7px 10px;display:flex;align-items:center;gap:6px;cursor:pointer">
+              <span style="font-size:14px">💬</span>
+              <div><div style="font-size:10px;font-weight:600;color:#1A7A35">WhatsApp</div><div style="font-size:10px;color:var(--dark3)">Chat directly</div></div>
+            </div>
+          </div>
+          <button style="width:100%;padding:9px;background:var(--dark);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .15s" onmouseover="this.style.background='var(--maroon)'" onmouseout="this.style.background='var(--dark)'">View Full Profile →</button>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Bottom note -->
+    <div style="text-align:center;padding:16px;font-size:12px;color:var(--dark3);margin-top:4px">
+      Showing 6 of 134 vendors · Sorted by rating ↓ · All vendors verified by Vivah Odisha team
+    </div>
+
   </div>
 
   <!-- ══ PACKAGES ══ -->
