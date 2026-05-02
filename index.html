@@ -1742,87 +1742,213 @@ body{font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);mi
 
   <!-- ══ REPORTS ══ -->
   <div class="page" id="pg-reports">
-    <div class="alert alert-ok"><span>✓</span><div>All reports auto-generated. Download as PDF or Excel. Data updates every 24 hours.</div></div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
-      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:12px;padding:16px;cursor:pointer;transition:all .15s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:24px;margin-bottom:8px">📊</div><div style="font-size:13px;font-weight:600;color:var(--dark);margin-bottom:4px">Monthly Revenue</div><div style="font-size:11px;color:var(--dark3)">District-wise, venue-type breakdown</div><div style="font-size:11px;color:var(--gold);margin-top:8px">↗ Generate PDF</div></div>
-      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:12px;padding:16px;cursor:pointer;transition:all .15s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:24px;margin-bottom:8px">🏨</div><div style="font-size:13px;font-weight:600;color:var(--dark);margin-bottom:4px">Hotel vs Mandap</div><div style="font-size:11px;color:var(--dark3)">Compare performance by venue type</div><div style="font-size:11px;color:var(--gold);margin-top:8px">↗ Generate PDF</div></div>
-      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:12px;padding:16px;cursor:pointer;transition:all .15s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:24px;margin-bottom:8px">🎁</div><div style="font-size:13px;font-weight:600;color:var(--dark);margin-bottom:4px">Package Analytics</div><div style="font-size:11px;color:var(--dark3)">Silver/Gold/Platinum uptake rates</div><div style="font-size:11px;color:var(--gold);margin-top:8px">↗ Generate PDF</div></div>
-      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:12px;padding:16px;cursor:pointer;transition:all .15s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:24px;margin-bottom:8px">🤝</div><div style="font-size:13px;font-weight:600;color:var(--dark);margin-bottom:4px">Vendor Performance</div><div style="font-size:11px;color:var(--dark3)">Top vendors by rating & revenue</div><div style="font-size:11px;color:var(--gold);margin-top:8px">↗ Generate PDF</div></div>
-      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:12px;padding:16px;cursor:pointer;transition:all .15s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:24px;margin-bottom:8px">🧾</div><div style="font-size:13px;font-weight:600;color:var(--dark);margin-bottom:4px">GST & Tax Report</div><div style="font-size:11px;color:var(--dark3)">GSTR-1 & GSTR-3B export</div><div style="font-size:11px;color:var(--gold);margin-top:8px">↗ Export Excel</div></div>
-      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:12px;padding:16px;cursor:pointer;transition:all .15s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:24px;margin-bottom:8px">📍</div><div style="font-size:13px;font-weight:600;color:var(--dark);margin-bottom:4px">District Coverage</div><div style="font-size:11px;color:var(--dark3)">Mandap & hotel density map</div><div style="font-size:11px;color:var(--gold);margin-top:8px">↗ Generate PDF</div></div>
+    <div class="alert alert-ok" style="margin-bottom:16px"><span>✓</span><div>All reports auto-generated from live Supabase data. Download as PDF or Excel. Updates every 24 hours.</div></div>
+    <div class="kgrid" style="margin-bottom:18px">
+      <div class="kpi"><div class="kpi-icon">📊</div><div class="kpi-label">Reports Generated</div><div class="kpi-val">248</div><div class="kpi-delta up">This year</div></div>
+      <div class="kpi"><div class="kpi-icon">📥</div><div class="kpi-label">Downloads</div><div class="kpi-val">1,842</div><div class="kpi-delta up">▲ 34 this month</div></div>
+      <div class="kpi"><div class="kpi-icon">📅</div><div class="kpi-label">Last Generated</div><div class="kpi-val">Today</div><div class="kpi-delta">Apr 27, 2025</div></div>
+      <div class="kpi"><div class="kpi-icon">🔄</div><div class="kpi-label">Auto Schedule</div><div class="kpi-val">Active</div><div class="kpi-delta up">Monthly reports on</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:14px;padding:18px;cursor:pointer;transition:all .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--gray2)';this.style.transform='';this.style.boxShadow=''">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--maroon3),var(--maroon));display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px">📊</div>
+        <div style="font-size:14px;font-weight:600;color:var(--dark);margin-bottom:5px">Monthly Revenue Report</div>
+        <div style="font-size:11px;color:var(--dark3);line-height:1.6;margin-bottom:12px">District-wise revenue, venue-type breakdown, growth vs last year, top performing mandaps and hotels</div>
+        <div style="display:flex;gap:7px">
+          <button style="flex:1;padding:8px;background:var(--maroon);color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📄 PDF</button>
+          <button style="flex:1;padding:8px;background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📊 Excel</button>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:14px;padding:18px;cursor:pointer;transition:all .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--gray2)';this.style.transform='';this.style.boxShadow=''">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#1A4A6B,#2A7AAB);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px">📋</div>
+        <div style="font-size:14px;font-weight:600;color:var(--dark);margin-bottom:5px">Booking Analytics</div>
+        <div style="font-size:11px;color:var(--dark3);line-height:1.6;margin-bottom:12px">Conversion rates, pipeline funnel, seasonal trends, enquiry to confirmation time across all 30 districts</div>
+        <div style="display:flex;gap:7px">
+          <button style="flex:1;padding:8px;background:#1A4A6B;color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📄 PDF</button>
+          <button style="flex:1;padding:8px;background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📊 Excel</button>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:14px;padding:18px;cursor:pointer;transition:all .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--gray2)';this.style.transform='';this.style.boxShadow=''">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#1A4A1A,#3A8A3A);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px">🤝</div>
+        <div style="font-size:14px;font-weight:600;color:var(--dark);margin-bottom:5px">Vendor Performance</div>
+        <div style="font-size:11px;color:var(--dark3);line-height:1.6;margin-bottom:12px">Top vendors by rating and revenue, utilization rate, payout summary, category-wise breakdown</div>
+        <div style="display:flex;gap:7px">
+          <button style="flex:1;padding:8px;background:#1A4A1A;color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📄 PDF</button>
+          <button style="flex:1;padding:8px;background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📊 Excel</button>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:14px;padding:18px;cursor:pointer;transition:all .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--gray2)';this.style.transform='';this.style.boxShadow=''">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#6B4A10,#C9973A);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px">⭐</div>
+        <div style="font-size:14px;font-weight:600;color:var(--dark);margin-bottom:5px">Customer Satisfaction</div>
+        <div style="font-size:11px;color:var(--dark3);line-height:1.6;margin-bottom:12px">NPS score, review analysis, repeat booking rate, feedback themes, customer lifetime value</div>
+        <div style="display:flex;gap:7px">
+          <button style="flex:1;padding:8px;background:#6B4A10;color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📄 PDF</button>
+          <button style="flex:1;padding:8px;background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📊 Excel</button>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:14px;padding:18px;cursor:pointer;transition:all .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--gray2)';this.style.transform='';this.style.boxShadow=''">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#4A1A6B,#8A3AAB);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px">🧾</div>
+        <div style="font-size:14px;font-weight:600;color:var(--dark);margin-bottom:5px">GST & Tax Report</div>
+        <div style="font-size:11px;color:var(--dark3);line-height:1.6;margin-bottom:12px">GSTR-1 and GSTR-3B ready export, TDS on vendor payments, quarterly tax summary</div>
+        <div style="display:flex;gap:7px">
+          <button style="flex:1;padding:8px;background:#4A1A6B;color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📄 PDF</button>
+          <button style="flex:1;padding:8px;background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📊 Excel</button>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray2);border-radius:14px;padding:18px;cursor:pointer;transition:all .2s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--gray2)';this.style.transform='';this.style.boxShadow=''">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--dark2),var(--dark3));display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px">📍</div>
+        <div style="font-size:14px;font-weight:600;color:var(--dark);margin-bottom:5px">District Coverage</div>
+        <div style="font-size:11px;color:var(--dark3);line-height:1.6;margin-bottom:12px">Mandap and hotel density per district, untapped markets, expansion potential analysis</div>
+        <div style="display:flex;gap:7px">
+          <button style="flex:1;padding:8px;background:var(--dark2);color:#fff;border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📄 PDF</button>
+          <button style="flex:1;padding:8px;background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:8px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;cursor:pointer">📊 Excel</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- ══ DISTRICTS ══ -->
   <div class="page" id="pg-districts">
-    <div class="card">
-      <div class="card-hd">All 30 Odisha Districts — Venue Coverage</div>
-      <div class="dist-grid">
-        <div class="dc active"><div class="dc-n">Khordha</div><div class="dc-c">8 mandaps · 6 hotels</div></div>
-        <div class="dc active"><div class="dc-n">Cuttack</div><div class="dc-c">6 mandaps · 3 hotels</div></div>
-        <div class="dc active"><div class="dc-n">Puri</div><div class="dc-c">5 mandaps · 4 hotels</div></div>
-        <div class="dc active"><div class="dc-n">Ganjam</div><div class="dc-c">4 mandaps · 2 hotels</div></div>
-        <div class="dc active"><div class="dc-n">Sundargarh</div><div class="dc-c">3 mandaps · 1 hotel</div></div>
-        <div class="dc active"><div class="dc-n">Balasore</div><div class="dc-c">3 mandaps</div></div>
-        <div class="dc active"><div class="dc-n">Sambalpur</div><div class="dc-c">3 mandaps</div></div>
-        <div class="dc active"><div class="dc-n">Mayurbhanj</div><div class="dc-c">2 mandaps</div></div>
-        <div class="dc active"><div class="dc-n">Keonjhar</div><div class="dc-c">2 mandaps</div></div>
-        <div class="dc active"><div class="dc-n">Koraput</div><div class="dc-c">2 mandaps</div></div>
-        <div class="dc"><div class="dc-n">Bhadrak</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Kendrapara</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Jajpur</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Dhenkanal</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Angul</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Bargarh</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Bolangir</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Rayagada</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Kalahandi</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Nuapada</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Nabarangpur</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Malkangiri</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Gajapati</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Kandhamal</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Boudh</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Nayagarh</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Sonepur</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Subarnapur</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Jharsuguda</div><div class="dc-c">0 — expand</div></div>
-        <div class="dc"><div class="dc-n">Jagatsinghpur</div><div class="dc-c">0 — expand</div></div>
+    <div class="g3" style="margin-bottom:16px">
+      <div class="kpi"><div class="kpi-icon">📍</div><div class="kpi-label">Total Districts</div><div class="kpi-val">30</div><div class="kpi-delta">Odisha coverage</div></div>
+      <div class="kpi"><div class="kpi-icon">✅</div><div class="kpi-label">Active Districts</div><div class="kpi-val">10</div><div class="kpi-delta up">▲ 2 new this quarter</div><div class="kbar"><div class="kfill" style="width:33%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">🚀</div><div class="kpi-label">Expansion Pending</div><div class="kpi-val">20</div><div class="kpi-delta">High opportunity areas</div></div>
+    </div>
+    <div class="card" style="margin-bottom:14px">
+      <div class="card-hd">All 30 Odisha Districts — Venue Coverage Map
+        <div style="display:flex;gap:12px;font-size:11px">
+          <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;background:var(--goldp);border:1px solid var(--gold);border-radius:3px;display:inline-block"></span>Active</span>
+          <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;background:var(--blueb);border:1px solid var(--bluer);border-radius:3px;display:inline-block"></span>High Potential</span>
+          <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;background:var(--gray);border:1px solid var(--gray2);border-radius:3px;display:inline-block"></span>Not started</span>
+        </div>
       </div>
-      <div style="display:flex;gap:16px;font-size:11px;color:var(--dark3);margin-top:12px">
-        <span style="display:flex;align-items:center;gap:6px"><span style="width:12px;height:12px;background:var(--goldp);border:1px solid var(--gold);border-radius:3px;display:inline-block"></span>Active (10 districts)</span>
-        <span style="display:flex;align-items:center;gap:6px"><span style="width:12px;height:12px;background:var(--white);border:1px solid var(--gray2);border-radius:3px;display:inline-block"></span>Expansion opportunity (20 districts)</span>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Khordha</div><div style="font-size:10px;color:var(--dark3)">8 mandaps · 6 hotels</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Cuttack</div><div style="font-size:10px;color:var(--dark3)">6 mandaps · 3 hotels</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Puri</div><div style="font-size:10px;color:var(--dark3)">5 mandaps · 4 hotels</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Ganjam</div><div style="font-size:10px;color:var(--dark3)">4 mandaps · 2 hotels</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Sundargarh</div><div style="font-size:10px;color:var(--dark3)">3 mandaps · 1 hotel</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Balasore</div><div style="font-size:10px;color:var(--dark3)">3 mandaps</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Sambalpur</div><div style="font-size:10px;color:var(--dark3)">3 mandaps</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Mayurbhanj</div><div style="font-size:10px;color:var(--dark3)">2 mandaps</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Keonjhar</div><div style="font-size:10px;color:var(--dark3)">2 mandaps</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--goldp);border:1.5px solid var(--gold);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Koraput</div><div style="font-size:10px;color:var(--dark3)">2 mandaps</div><div style="font-size:10px;color:var(--ok);font-weight:600;margin-top:3px">✓ Active</div></div>
+        <div style="background:var(--blueb);border:1.5px solid var(--bluer);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Bhadrak</div><div style="font-size:10px;color:var(--dark3)">High potential</div><div style="font-size:10px;color:var(--blue);font-weight:600;margin-top:3px">→ Expand</div></div>
+        <div style="background:var(--blueb);border:1.5px solid var(--bluer);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Kendrapara</div><div style="font-size:10px;color:var(--dark3)">High potential</div><div style="font-size:10px;color:var(--blue);font-weight:600;margin-top:3px">→ Expand</div></div>
+        <div style="background:var(--blueb);border:1.5px solid var(--bluer);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Jajpur</div><div style="font-size:10px;color:var(--dark3)">High potential</div><div style="font-size:10px;color:var(--blue);font-weight:600;margin-top:3px">→ Expand</div></div>
+        <div style="background:var(--blueb);border:1.5px solid var(--bluer);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Dhenkanal</div><div style="font-size:10px;color:var(--dark3)">High potential</div><div style="font-size:10px;color:var(--blue);font-weight:600;margin-top:3px">→ Expand</div></div>
+        <div style="background:var(--blueb);border:1.5px solid var(--bluer);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''"><div style="font-size:12px;font-weight:600;color:var(--dark)">Angul</div><div style="font-size:10px;color:var(--dark3)">High potential</div><div style="font-size:10px;color:var(--blue);font-weight:600;margin-top:3px">→ Expand</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Bargarh</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Bolangir</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Rayagada</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Kalahandi</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Nuapada</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Nabarangpur</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Malkangiri</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Gajapati</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Kandhamal</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Boudh</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Nayagarh</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Sonepur</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Subarnapur</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Jharsuguda</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
+        <div style="background:var(--gray);border:1px solid var(--gray2);border-radius:10px;padding:10px;cursor:pointer" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'"><div style="font-size:12px;font-weight:500;color:var(--dark)">Jagatsinghpur</div><div style="font-size:10px;color:var(--dark3)">0 venues</div><div style="font-size:10px;color:var(--dark3);margin-top:3px">Not started</div></div>
       </div>
     </div>
   </div>
 
   <!-- ══ CUSTOMERS ══ -->
   <div class="page" id="pg-customers">
+    <div class="kgrid" style="margin-bottom:16px">
+      <div class="kpi"><div class="kpi-icon">👥</div><div class="kpi-label">Total Customers</div><div class="kpi-val">1,248</div><div class="kpi-delta up">▲ 34 this month</div><div class="kbar"><div class="kfill" style="width:62%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">🔄</div><div class="kpi-label">Repeat Customers</div><div class="kpi-val">186</div><div class="kpi-delta up">15% repeat rate</div><div class="kbar"><div class="kfill" style="width:15%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">💰</div><div class="kpi-label">Avg Customer Value</div><div class="kpi-val">₹2.27L</div><div class="kpi-delta up">▲ 8% this year</div><div class="kbar"><div class="kfill" style="width:45%"></div></div></div>
+      <div class="kpi"><div class="kpi-icon">⭐</div><div class="kpi-label">Premium Customers</div><div class="kpi-val">312</div><div class="kpi-delta">Gold+ package buyers</div><div class="kbar"><div class="kfill" style="width:25%"></div></div></div>
+    </div>
     <div class="card">
-      <div class="card-hd">Customer Database — 1,248 Customers
-        <input class="tb-search" style="width:200px" placeholder="🔍 Search customers...">
+      <div class="card-hd">Customer Database
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          <input class="tb-search" style="width:200px" placeholder="🔍 Search customers...">
+          <select style="border:1px solid var(--gray2);border-radius:7px;padding:6px 10px;font-size:12px;font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);outline:none"><option>All Districts</option><option>Khordha</option><option>Cuttack</option><option>Puri</option></select>
+          <select style="border:1px solid var(--gray2);border-radius:7px;padding:6px 10px;font-size:12px;font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);outline:none"><option>All Packages</option><option>Silver</option><option>Gold</option><option>Platinum</option></select>
+          <button style="background:var(--okb);color:var(--ok);border:1px solid var(--okr);border-radius:7px;padding:6px 12px;font-size:12px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:500">📥 Export</button>
+        </div>
       </div>
       <div class="tbl-wrap">
         <table class="tbl">
-          <thead><tr><th>Name</th><th>Mobile</th><th>WhatsApp</th><th>District</th><th>Venue Booked</th><th>Package</th><th>Total Spent</th><th>Bookings</th><th>Status</th></tr></thead>
+          <thead><tr><th>Customer</th><th>Mobile</th><th>WhatsApp</th><th>District</th><th>Venue Booked</th><th>Package</th><th>Total Spent</th><th>Bookings</th><th>Last Booking</th><th>Type</th></tr></thead>
           <tbody>
-            <tr><td style="font-weight:500">Priya & Rohan Das</td><td style="color:var(--ok)">📞 9876543210</td><td style="color:#1A7A35">💬 Chat</td><td>Khordha</td><td>Kalinga Conv.</td><td><span class="b b-w">Gold</span></td><td style="font-weight:600">₹2,57,000</td><td>1</td><td><span class="b b-ok">Confirmed</span></td></tr>
-            <tr><td style="font-weight:500">Sunita & Amit Patra</td><td style="color:var(--ok)">📞 9876543211</td><td style="color:#1A7A35">💬 Chat</td><td>Puri</td><td>Mayfair Hotel</td><td><span class="b b-w">Platinum</span></td><td style="font-weight:600">₹4,65,000</td><td>1</td><td><span class="b b-ok">Confirmed</span></td></tr>
-            <tr><td style="font-weight:500">Mamata & Sanjay Nayak</td><td style="color:var(--ok)">📞 9876543212</td><td style="color:#1A7A35">💬 Chat</td><td>Cuttack</td><td>Swosti Hotel</td><td><span class="b b-w">Gold</span></td><td style="font-weight:600;color:var(--warn)">Advance Due</td><td>2</td><td><span class="b b-w">Pending</span></td></tr>
-            <tr><td style="font-weight:500">Rina & Bijay Mohapatra</td><td style="color:var(--ok)">📞 9876543213</td><td style="color:#1A7A35">💬 Chat</td><td>Sambalpur</td><td>Sambalpur Vivah</td><td><span class="b b-g">Silver</span></td><td style="font-weight:600">₹1,08,000</td><td>1</td><td><span class="b b-ok">Confirmed</span></td></tr>
+            <tr onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:var(--maroon);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">PR</div><div><div style="font-size:12px;font-weight:500">Priya & Rohan Das</div></div></div></td>
+              <td style="color:var(--ok)">📞 9876543210</td>
+              <td><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:3px 9px;font-size:10px;cursor:pointer;font-family:'Outfit',sans-serif">💬 Chat</button></td>
+              <td>Khordha</td><td style="font-size:11px">Kalinga Conv.</td>
+              <td><span class="b b-w">Gold</span></td>
+              <td style="font-weight:700;color:var(--maroon)">₹2,57,000</td><td>1</td><td style="font-size:11px">Apr 28, 2025</td>
+              <td><span class="b b-g">Premium</span></td>
+            </tr>
+            <tr onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:#1A3A6B;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">SA</div><div><div style="font-size:12px;font-weight:500">Sunita & Amit Patra</div></div></div></td>
+              <td style="color:var(--ok)">📞 9876543211</td>
+              <td><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:3px 9px;font-size:10px;cursor:pointer;font-family:'Outfit',sans-serif">💬 Chat</button></td>
+              <td>Puri</td><td style="font-size:11px">Mayfair Hotel</td>
+              <td><span class="b" style="background:#F0E8FF;color:#5820A0;border:1px solid #C8A0E8">Platinum</span></td>
+              <td style="font-weight:700;color:var(--maroon)">₹4,65,000</td><td>1</td><td style="font-size:11px">Apr 30, 2025</td>
+              <td><span class="b b-g">Premium</span></td>
+            </tr>
+            <tr onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:var(--err);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">MS</div><div><div style="font-size:12px;font-weight:500">Mamata & Sanjay Nayak</div></div></div></td>
+              <td style="color:var(--ok)">📞 9876543212</td>
+              <td><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:3px 9px;font-size:10px;cursor:pointer;font-family:'Outfit',sans-serif">💬 Chat</button></td>
+              <td>Cuttack</td><td style="font-size:11px">Swosti Hotel</td>
+              <td><span class="b b-w">Gold</span></td>
+              <td style="font-weight:700;color:var(--warn)">Advance Due</td><td>2</td><td style="font-size:11px">May 1, 2025</td>
+              <td><span class="b b-i">Repeat</span></td>
+            </tr>
+            <tr onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:var(--dark3);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">RB</div><div><div style="font-size:12px;font-weight:500">Rina & Bijay Mohapatra</div></div></div></td>
+              <td style="color:var(--ok)">📞 9876543213</td>
+              <td><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:3px 9px;font-size:10px;cursor:pointer;font-family:'Outfit',sans-serif">💬 Chat</button></td>
+              <td>Sambalpur</td><td style="font-size:11px">Sambalpur Vivah</td>
+              <td><span class="b b-ok">Silver</span></td>
+              <td style="font-weight:700;color:var(--maroon)">₹1,08,000</td><td>1</td><td style="font-size:11px">May 3, 2025</td>
+              <td><span class="b b-g">Regular</span></td>
+            </tr>
+            <tr onmouseover="this.style.background='var(--goldb)'" onmouseout="this.style.background=''">
+              <td><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">LD</div><div><div style="font-size:12px;font-weight:500">Lipsa & Debasish Jena</div></div></div></td>
+              <td style="color:var(--ok)">📞 9876543214</td>
+              <td><button style="background:#E7F9EC;color:#1A7A35;border:1px solid #A8E0B5;border-radius:6px;padding:3px 9px;font-size:10px;cursor:pointer;font-family:'Outfit',sans-serif">💬 Chat</button></td>
+              <td>Puri</td><td style="font-size:11px">Puri Heritage</td>
+              <td><span class="b b-ok">Silver</span></td>
+              <td style="font-weight:700;color:var(--dark3)">Enquiry</td><td>1</td><td style="font-size:11px">May 6, 2025</td>
+              <td><span class="b b-g">New</span></td>
+            </tr>
           </tbody>
         </table>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-top:1px solid var(--gray2);margin-top:8px;font-size:12px;color:var(--dark3)">
+        <span>Showing <strong style="color:var(--dark)">5</strong> of <strong style="color:var(--dark)">1,248</strong> customers</span>
+        <div style="display:flex;gap:4px">
+          <button style="padding:5px 10px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-size:12px;font-family:'Outfit',sans-serif">← Prev</button>
+          <button style="padding:5px 10px;border:1px solid var(--gold);border-radius:6px;cursor:pointer;background:var(--goldp);font-size:12px;font-family:'Outfit',sans-serif;font-weight:600">1</button>
+          <button style="padding:5px 10px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-size:12px;font-family:'Outfit',sans-serif">2</button>
+          <button style="padding:5px 10px;border:1px solid var(--gray2);border-radius:6px;cursor:pointer;background:var(--white);font-size:12px;font-family:'Outfit',sans-serif">Next →</button>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- ══ RATINGS ══ -->
   <div class="page" id="pg-ratings">
-    <div class="g2">
+    <div class="g2" style="margin-bottom:14px">
       <div class="card">
         <div class="card-hd">Platform Overall Rating</div>
-        <div style="display:flex;align-items:center;gap:20px;margin-bottom:16px">
-          <div style="text-align:center"><div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;color:var(--gold)">4.7</div><div style="color:var(--gold);font-size:20px">★★★★★</div><div style="font-size:11px;color:var(--dark3)">1,248 reviews</div></div>
+        <div style="display:flex;gap:20px;align-items:center;margin-bottom:16px">
+          <div style="text-align:center;flex-shrink:0">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:700;color:var(--gold);line-height:1">4.7</div>
+            <div style="color:var(--gold);font-size:22px;margin-top:4px">★★★★★</div>
+            <div style="font-size:11px;color:var(--dark3);margin-top:6px">1,248 total reviews</div>
+          </div>
           <div style="flex:1">
             <div class="rb-row"><div class="rb-lbl">5★</div><div class="rb-track"><div class="rb-fill" style="width:72%"></div></div><div class="rb-cnt">898</div></div>
             <div class="rb-row"><div class="rb-lbl">4★</div><div class="rb-track"><div class="rb-fill" style="width:18%"></div></div><div class="rb-cnt">225</div></div>
@@ -1831,14 +1957,40 @@ body{font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);mi
             <div class="rb-row"><div class="rb-lbl">1★</div><div class="rb-track"><div class="rb-fill" style="width:1%"></div></div><div class="rb-cnt">13</div></div>
           </div>
         </div>
-        <div class="alert alert-ok" style="margin:0"><span>✓</span><div>Vendors auto-sorted by rating. Top-rated shown first in user search.</div></div>
+        <div class="alert alert-ok" style="margin:0"><span>✓</span><div>Vendors auto-sorted by rating. Top-rated appears first in user search. <strong>Rating affects vendor ranking.</strong></div></div>
       </div>
       <div class="card">
-        <div class="card-hd">Recent Reviews</div>
+        <div class="card-hd">Rating by Category</div>
         <div style="display:flex;flex-direction:column;gap:10px">
-          <div style="border:1px solid var(--gray2);border-radius:9px;padding:11px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:12px;font-weight:600">Priya Das</span><span style="color:var(--gold);font-size:13px">★★★★★</span></div><div style="font-size:10px;color:var(--dark3);margin-bottom:4px">Kalinga Convention Hall</div><div style="font-size:11px;color:var(--dark2)">"Perfect venue. Excellent catering. Very professional team!"</div></div>
-          <div style="border:1px solid var(--gray2);border-radius:9px;padding:11px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:12px;font-weight:600">Amit Patra</span><span style="color:var(--gold);font-size:13px">★★★★☆</span></div><div style="font-size:10px;color:var(--dark3);margin-bottom:4px">Kalinga Frames Photography</div><div style="font-size:11px;color:var(--dark2)">"Beautiful photography. The cinematic video was outstanding!"</div></div>
-          <div style="border:1px solid var(--gray2);border-radius:9px;padding:11px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:12px;font-weight:600">Sanjay Nayak</span><span style="color:var(--gold);font-size:13px">★★★★★</span></div><div style="font-size:10px;color:var(--dark3);margin-bottom:4px">Swagat Catering</div><div style="font-size:11px;color:var(--dark2)">"Food was amazing. 700 guests and everything was on time!"</div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="display:flex;align-items:center;gap:6px"><span style="font-size:14px">🏛</span>Mandaps & Venues</span><span style="font-weight:700;color:var(--gold)">⭐ 4.8</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:96%;background:var(--gold);border-radius:3px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="display:flex;align-items:center;gap:6px"><span style="font-size:14px">📸</span>Photography</span><span style="font-weight:700;color:var(--gold)">⭐ 4.9</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:98%;background:var(--gold);border-radius:3px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="display:flex;align-items:center;gap:6px"><span style="font-size:14px">🍽</span>Catering</span><span style="font-weight:700;color:var(--gold)">⭐ 4.7</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:94%;background:var(--gold);border-radius:3px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="display:flex;align-items:center;gap:6px"><span style="font-size:14px">🌸</span>Decoration</span><span style="font-weight:700;color:var(--gold)">⭐ 4.6</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:92%;background:var(--gold);border-radius:3px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="display:flex;align-items:center;gap:6px"><span style="font-size:14px">💄</span>Bridal Makeup</span><span style="font-weight:700;color:var(--gold)">⭐ 4.9</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:98%;background:var(--gold);border-radius:3px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="display:flex;align-items:center;gap:6px"><span style="font-size:14px">🎺</span>Band & DJ</span><span style="font-weight:700;color:var(--gold)">⭐ 4.5</span></div><div style="height:6px;background:var(--gray2);border-radius:3px"><div style="height:100%;width:90%;background:var(--gold);border-radius:3px"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-hd">Recent Reviews <span class="card-lk">View all 1,248 reviews →</span></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+        <div style="border:1px solid var(--gray2);border-radius:10px;padding:14px;transition:all .15s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:30px;border-radius:50%;background:var(--maroon);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700">PD</div><span style="font-size:12px;font-weight:600;color:var(--dark)">Priya Das</span></div><span style="color:var(--gold);font-size:14px">★★★★★</span></div>
+          <div style="font-size:10px;color:var(--dark3);margin-bottom:6px">🏛 Kalinga Convention Hall</div>
+          <div style="font-size:11.5px;color:var(--dark2);line-height:1.6">"Perfect venue. Excellent catering. Very professional team. Will recommend to everyone!"</div>
+          <div style="font-size:10px;color:var(--dark3);margin-top:8px">Apr 28, 2025</div>
+        </div>
+        <div style="border:1px solid var(--gray2);border-radius:10px;padding:14px;transition:all .15s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:30px;border-radius:50%;background:#1A3A6B;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700">AP</div><span style="font-size:12px;font-weight:600;color:var(--dark)">Amit Patra</span></div><span style="color:var(--gold);font-size:14px">★★★★☆</span></div>
+          <div style="font-size:10px;color:var(--dark3);margin-bottom:6px">📸 Kalinga Frames Photography</div>
+          <div style="font-size:11.5px;color:var(--dark2);line-height:1.6">"Beautiful photography. The cinematic video was outstanding. Drone shots were amazing!"</div>
+          <div style="font-size:10px;color:var(--dark3);margin-top:8px">Apr 30, 2025</div>
+        </div>
+        <div style="border:1px solid var(--gray2);border-radius:10px;padding:14px;transition:all .15s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gray2)'">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><div style="display:flex;align-items:center;gap:8px"><div style="width:30px;height:30px;border-radius:50%;background:var(--ok);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700">SN</div><span style="font-size:12px;font-weight:600;color:var(--dark)">Sanjay Nayak</span></div><span style="color:var(--gold);font-size:14px">★★★★★</span></div>
+          <div style="font-size:10px;color:var(--dark3);margin-bottom:6px">🍽 Swagat Catering Services</div>
+          <div style="font-size:11.5px;color:var(--dark2);line-height:1.6">"Food was amazing. 700 guests and everything was on time. Best catering in Cuttack!"</div>
+          <div style="font-size:10px;color:var(--dark3);margin-top:8px">May 1, 2025</div>
         </div>
       </div>
     </div>
@@ -1847,24 +1999,45 @@ body{font-family:'Outfit',sans-serif;background:var(--gray);color:var(--dark);mi
   <!-- ══ SETTINGS ══ -->
   <div class="page" id="pg-settings">
     <div class="g2">
-      <div class="fsec" style="margin:0">
-        <div class="fsec-t">Business Profile</div>
-        <div class="frow1"><div class="fg"><label>Business Name</label><input value="Vivah Odisha Pvt. Ltd."></div></div>
-        <div class="frow1"><div class="fg"><label>GST Number</label><input value="21AABCV1234F1Z5"></div></div>
-        <div class="frow1"><div class="fg"><label>Registered Address</label><textarea>Plot No. 42, Satya Nagar, Bhubaneswar - 751007, Odisha</textarea></div></div>
-        <div class="frow"><div class="fg"><label>Support Phone</label><input value="+91 98765 00000"></div><div class="fg"><label>Support Email</label><input value="support@vivah-odisha.in"></div></div>
-        <div class="frow"><div class="fg"><label>Advance % Required</label><input type="number" value="20"></div><div class="fg"><label>Platform Commission %</label><input type="number" value="8"></div></div>
-        <button class="sbtn" style="margin-top:4px">Save Settings</button>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="fsec" style="margin:0">
+          <div class="fsec-t">🏢 Business Profile</div>
+          <div class="frow1"><div class="fg"><label>Business Name</label><input value="Vivah Odisha Pvt. Ltd."></div></div>
+          <div class="frow1"><div class="fg"><label>GST Number</label><input value="21AABCV1234F1Z5"></div></div>
+          <div class="frow1"><div class="fg"><label>Registered Address</label><textarea style="min-height:60px">Plot No. 42, Satya Nagar, Bhubaneswar - 751007, Odisha</textarea></div></div>
+          <div class="frow"><div class="fg"><label>Support Phone</label><input value="+91 98765 00000"></div><div class="fg"><label>Support Email</label><input value="support@vivah-odisha.in"></div></div>
+          <div class="frow"><div class="fg"><label>Website</label><input value="vivah-odisha.in"></div><div class="fg"><label>WhatsApp Business</label><input value="+91 98765 00000"></div></div>
+        </div>
+        <div class="fsec" style="margin:0">
+          <div class="fsec-t">💰 Business Rules</div>
+          <div class="frow"><div class="fg"><label>Advance % Required</label><input type="number" value="20" min="10" max="50"></div><div class="fg"><label>Platform Commission %</label><input type="number" value="8" min="5" max="20"></div></div>
+          <div class="frow"><div class="fg"><label>GST Rate %</label><input type="number" value="18"></div><div class="fg"><label>Platform Fee (₹)</label><input type="number" value="1000"></div></div>
+          <div class="frow1"><div class="fg"><label>Cancellation Policy</label><select><option>25% refund within 30 days</option><option>50% refund within 60 days</option><option>No refund policy</option></select></div></div>
+          <button class="sbtn">Save Business Settings</button>
+        </div>
       </div>
-      <div class="card" style="margin:0">
-        <div class="card-hd">System Features</div>
-        <div class="tog-row"><div><div class="tog-l">OTP Login for Users</div><div class="tog-s">Mobile OTP authentication</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
-        <div class="tog-row"><div><div class="tog-l">Location Search (10km GPS)</div><div class="tog-s">Show mandaps near user</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
-        <div class="tog-row"><div><div class="tog-l">Rating-based Vendor Sort</div><div class="tog-s">Auto-sort by user ratings</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
-        <div class="tog-row"><div><div class="tog-l">WhatsApp Integration</div><div class="tog-s">Direct chat links on listings</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
-        <div class="tog-row"><div><div class="tog-l">Hotel Venue Support</div><div class="tog-s">Multiple halls per hotel</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
-        <div class="tog-row"><div><div class="tog-l">Razorpay Payments</div><div class="tog-s">Online payment gateway</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
-        <div class="tog-row"><div><div class="tog-l">Pre-Wedding Booking</div><div class="tog-s">Studio & outdoor shoot module</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="card" style="margin:0">
+          <div class="card-hd">⚙️ System Features</div>
+          <div class="tog-row"><div><div class="tog-l">OTP Mobile Login</div><div class="tog-s">Login with Indian mobile number + OTP</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+          <div class="tog-row"><div><div class="tog-l">GPS Radius Search (10km)</div><div class="tog-s">Show mandaps near user location</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+          <div class="tog-row"><div><div class="tog-l">Rating-based Vendor Sort</div><div class="tog-s">Auto-sort vendors by customer ratings</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+          <div class="tog-row"><div><div class="tog-l">WhatsApp Integration</div><div class="tog-s">Direct chat links on all listings</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+          <div class="tog-row"><div><div class="tog-l">Hotel Venue Support</div><div class="tog-s">Multiple halls per hotel account</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+          <div class="tog-row"><div><div class="tog-l">Razorpay Payments</div><div class="tog-s">Online payment + EMI gateway</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+          <div class="tog-row"><div><div class="tog-l">Pre-Wedding Booking</div><div class="tog-s">Studio & outdoor shoot module</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+          <div class="tog-row"><div><div class="tog-l">Offline Booking Sync</div><div class="tog-s">Owner app blocks dates in real-time</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+          <div class="tog-row"><div><div class="tog-l">360° Video Support</div><div class="tog-s">Virtual venue tours for users</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+        </div>
+        <div class="card" style="margin:0">
+          <div class="card-hd">📱 App Version Info</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div style="background:var(--gray);border-radius:9px;padding:12px"><div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:4px">ADMIN DASHBOARD</div><div style="font-size:14px;font-weight:700;color:var(--dark)">v3.0</div><div style="font-size:10px;color:var(--ok)">✓ Up to date</div></div>
+            <div style="background:var(--gray);border-radius:9px;padding:12px"><div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:4px">USER APP</div><div style="font-size:14px;font-weight:700;color:var(--dark)">v2.1</div><div style="font-size:10px;color:var(--warn)">⏳ In development</div></div>
+            <div style="background:var(--gray);border-radius:9px;padding:12px"><div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:4px">OWNER APP</div><div style="font-size:14px;font-weight:700;color:var(--dark)">v1.8</div><div style="font-size:10px;color:var(--warn)">⏳ In development</div></div>
+            <div style="background:var(--gray);border-radius:9px;padding:12px"><div style="font-size:10px;color:var(--dark3);font-weight:600;margin-bottom:4px">DATABASE</div><div style="font-size:14px;font-weight:700;color:var(--dark)">Supabase</div><div style="font-size:10px;color:var(--ok)">✓ Connected</div></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
